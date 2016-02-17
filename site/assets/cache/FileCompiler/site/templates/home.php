@@ -1,8 +1,27 @@
-<?php foreach($pages->find("parent=/rides") as $p) $pages->delete($p);?>
+<?php #foreach($pages->find("parent=/rides") as $p) $pages->delete($p);?>
 
 <?php if($user->isLoggedIn() && $user->strava_id) : ?>
 	<img src="<?=$user->avatar->first()->size("200","200")->url;?>"><br>
 	<?=$user->firstname." ".$user->lastname;?>
+	<h1>Diese Woche</h1>
+	<ul>
+	<?php 
+	$monday = date('d.m.Y H:i:s',strtotime("last Monday"));
+		$this_week = $pages->find("template=ride,start_date_local>".$monday);
+		$distance = array();
+		foreach($this_week as $tw){
+			$dist = floatval($tw->distance);
+			if(isset($distance{$tw->athlete})) $distance{$tw->athlete} = ($distance{$tw->athlete}+$dist);
+			else $distance{$tw->athlete} = $dist;
+
+		}
+		foreach ($distance as $key => $value) {
+			$dude = $users->get('strava_id='.$key);
+			if($dude->id) $key=$dude->firstname." ".$dude->lastname;
+			echo $key." - ".($value/1000)."<br>";# code...
+		}
+	?>
+	</ul>
 	<h1>Club Rides</h1>
 	<ul>
 	<?php foreach(getRides() as $ride):?>
