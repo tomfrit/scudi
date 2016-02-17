@@ -27,3 +27,8 @@
 2016-02-17 11:50:45	thomas	http://scuderia/admin/module/edit?name=AdminThemeReno	Saved module 'AdminThemeReno' config data
 2016-02-17 14:18:50	thomas	http://scuderia/admin/page/edit/?id=1049	Failed to init module: ProcessPageEdit - Unknown page
 2016-02-17 14:28:14	thomas	http://scuderia/admin/page/edit/?id=1140	Failed to init module: ProcessPageEdit - Unknown page
+2016-02-17 14:48:37	thomas	http://scuderia/admin/module/download/	Saved module info caches
+2016-02-17 14:48:38	thomas	http://scuderia/admin/module/download/	Saved module info caches
+2016-02-17 14:48:40	thomas	http://scuderia/admin/module/	Installed module 'ProcessDatabaseBackups'
+2016-02-17 14:48:41	thomas	http://scuderia/admin/module/	Saved module info caches
+2016-02-17 14:48:47	thomas	http://scuderia/admin/module/edit?name=ProcessDatabaseBackups	Saved module 'ProcessDatabaseBackups' config data
