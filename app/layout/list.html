@@ -1,0 +1,9 @@
+<table class="uk-table">
+	<tr ng-repeat="item in rides">
+		<td>{{(item.start_date_local*1000) | date:'dd.MM.yyyy HH:mm'}}</td>
+		<td>{{item.title}}</td>
+		<td><athlete id="{{item.athlete}}">{{name}}</athlete></td>
+		<td>{{item.distance/1000 | number:2}}km</td>
+		<td>{{item.moving_time | secondsToDateTime | date:'HH:mm:ss'}}</td>
+	</tr>
+</table>

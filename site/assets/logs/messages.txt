@@ -1,1 +1,2 @@
 2016-02-17 11:50:51	thomas	http://scuderia/admin/profile/	Profile saved - admin_theme
+2016-02-22 11:42:37	thomas	http://scuderia.local/admin/setup/field/send-templates-save?id=124	Deleted field "map" data in 0 row(s) from 0 page(s). [page-by-page] (Fields)

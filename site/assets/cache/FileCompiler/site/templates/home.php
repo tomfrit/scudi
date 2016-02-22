@@ -1,89 +1,85 @@
-<?php #foreach($pages->find("parent=/rides") as $p) $pages->delete($p);?>
+<!DOCTYPE html>
+<html ng-app="scudiClub">
+<head>
 
-<?php if($user->isLoggedIn() && $user->strava_id) : ?>
-	<img src="<?=$user->avatar->first()->size("200","200")->url;?>"><br>
-	<?=$user->firstname." ".$user->lastname;?>
-	<h1>Diese Woche</h1>
-	<ul>
-	<?php 
-	$monday = date('d.m.Y H:i:s',strtotime("last Monday"));
-		$this_week = $pages->find("template=ride,start_date_local>".$monday);
-		$distance = array();
-		foreach($this_week as $tw){
-			$dist = floatval($tw->distance);
-			if(isset($distance{$tw->athlete})) $distance{$tw->athlete} = ($distance{$tw->athlete}+$dist);
-			else $distance{$tw->athlete} = $dist;
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="description" content="Die Scuderia Südstadt im Strava Club" />
+    <meta name="keywords" content="Scudi Scuderia Südstadt Strava Strava Club" />
+    <meta name="language" content="de" />
+    <meta name="generator" content="ProcessWire" />  
+    <meta name="image" content="{{image}}">
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <title>Scuderia Strava Club</title>
+    <base href="//<?=$config->httpHost;?>/" />
+    <meta property="og:title" content=""/>
+    <meta property="og:description" content=""/>
+    <meta property="og:url" content=""/>
+    <meta property="og:type" content=""/>
+    <meta property="og:image" content=""/>
+    <meta property="og:site_name" content=""/>
+    <meta property="fb:admins" content="1410691276"/>
+    
+    <link rel="stylesheet" href="/vendor/uikit/css/uikit.almost-flat.min.css" />
+    <link rel="stylesheet" href="/vendor/uikit/css/components/notify.almost-flat.min.css" />
+    <link rel="stylesheet" href="/vendor/uikit/css/components/slideshow.almost-flat.min.css" />
+    <link rel="stylesheet" href="/vendor/uikit/css/components/slidenav.almost-flat.min.css" />
+    <link rel="stylesheet" href="/vendor/uikit/css/components/slider.almost-flat.min.css" />
+    <link rel="stylesheet" href="/vendor/uikit/css/components/search.almost-flat.min.css" />
+    <link rel="stylesheet" href="/vendor/uikit/css/components/form-advanced.almost-flat.min.css" />
+    <link rel="stylesheet" href="/vendor/uikit/css/components/progress.almost-flat.min.css" />
+    <link rel="stylesheet" href="<?=$config->urls->templates?>styles/style.css?v=3" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-resource.min.js"></script>
+    <script src="/vendor/uikit/js/uikit.min.js"></script>
+    <script src="/vendor/uikit//js/components/notify.min.js"></script>
+    <script src="/vendor/uikit/js/components/grid.min.js"></script>
+    <script src="/vendor/uikit/js/components/slideshow.min.js"></script>
+    <script src="/vendor/uikit/js/components/slider.min.js"></script>
+    <script src="/vendor/angular-ui-router.min.js"></script>
+    <script src="/vendor/angular.dcb-img-fallback.js"></script>
+    <script src="/vendor/imagesLoaded.min.js"></script>
+    <!--script src="/vendor/angular-images-loaded.js"></script-->
 
-		}
-		foreach ($distance as $key => $value) {
-			$dude = $users->get('strava_id='.$key);
-			if($dude->id) $key=$dude->firstname." ".$dude->lastname;
-			echo $key." - ".($value/1000)."<br>";# code...
-		}
-	?>
-	</ul>
-	<h1>Club Rides</h1>
-	<ul>
-	<?php foreach(getRides() as $ride):?>
-		<?php addRide($ride); ?>
-		<li><?=$ride->athlete->firstname." ".$ride->athlete->lastname." ".$ride->name." ".($ride->distance/1000);?></li>
+    <script src="/app/config.js?v=02"></script>
+    <script src="/app/controller.js?v=025"></script>
+    <script src="/app/factory.js?v=02"></script>
+    <script src="/app/directives.js?v=01"></script>
 
-	<?php endforeach;?>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-<?php else:?>
+      ga('create', 'UA-52807640-3', 'auto');
+      ga('send', 'pageview');
 
-<a href="https://www.strava.com/oauth/authorize?client_id=9026&response_type=code&redirect_uri=http://scuderia.local/token_exchange/&approval_prompt=force"><img src="/img/LogInWithStrava.png"></a>
+      
+  </script>
 
 
-<?php endif;?>
+</head>
+
+<body>
+    <div class="all">
+
+        <div class="content-wrapper uk-grid uk-margin-large-top" style="margin-left:-15px">
+            <div class="uk-width-1-1 uk-text-center uk-text-danger" ng-if="loading"><i class="uk-icon uk-icon-refresh uk-icon-spin"></i> Loading</div>
+            <div class="uk-width-1-1" ui-view="main">
+                <div class="uk-container-center uk-width-3-4 uk-panel uk-panel-box uk-margin-top">
+                	<a href="https://www.strava.com/oauth/authorize?client_id=9026&response_type=code&redirect_uri=http://scuderia.local/token_exchange/&approval_prompt=force"><img src="/img/LogInWithStrava.png"></a>
+                </div>
+            </div>
+            
+        </div>
+
+        <div id="menu" class="uk-offcanvas" ui-view="offcanvas"></div>
 
 
-<?php 
-
-function getRides() {
-	$url = 'https://www.strava.com/api/v3/clubs/34092/activities?per_page=200';
-	$auth = "authorization: Bearer ".\ProcessWire\wire('session')->access_token;
-
-
-//open connection
-	$ch = curl_init();
-
-
-//set the url, number of POST vars, POST data
-	curl_setopt($ch,CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_HTTPHEADER, array($auth));
-	#curl_setopt($ch,CURLOPT_POST, 1);
-	#curl_setopt($ch,CURLOPT_POSTFIELDS, "per_page=200");
-	curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-//execute post
-	$result = curl_exec($ch);
-	
-//close connection
-	curl_close($ch);
-	return json_decode($result);
-}
-
-function addRide($ride) {
-	$r=\ProcessWire\wire('pages')->get('ride_id='.$ride->id);
-	if(!$r->id) {
-		$r = new \ProcessWire\Page;
-		$r->template = \ProcessWire\wire('templates')->get('ride');
-		$r->parent= \ProcessWire\wire('pages')->get('/rides/');
-		$r->name=$ride->id;
-		$r->title = $ride->name;
-		$r->ride_id = $ride->id;
-		$r->athlete = $ride->athlete->id;
-		$fields = array('average_cadence','average_heartrate','average_temp','average_watts','calories','device_watts','distance','elapsed_time','gear_id','kilojoules','max_heartrate','moving_time','suffer_score','total_elevation_gain','type');
-		foreach($fields as $fi) {
-			if(isset($ride->$fi)) $r->set($fi,$ride->$fi);
-		}
-		$r->max_speed = ($ride->max_speed*3.6);
-		$r->average_speed = ($ride->average_speed*3.6);
-		$r->start_date_local = strtotime($ride->start_date_local);
-		$r->save();
-	}
-	return $ride;
+    </div>
 
 
 
-}
+

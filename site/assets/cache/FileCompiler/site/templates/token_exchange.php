@@ -62,7 +62,10 @@ function add_user($u) {
 	$user->of(true);
 	\ProcessWire\wire('session')->login($user->name,'wurst');
 	\ProcessWire\wire('session')->set("access_token",$data->access_token);
-
+	\ProcessWire\wire('session')->set("strava_id",$data->athlete->id);
 	return $user;
 }
+
+
+#http://maps.googleapis.com/maps/api/staticmap?sensor=false&size=200x200&path=weight:3%7Ccolor:red%7Cenc:
 ?>
