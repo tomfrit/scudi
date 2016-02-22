@@ -10,13 +10,22 @@
 	}
 
 	app.directive("athlete",athlete);
-	function athlete(loader) {
+	function athlete(loader,$q) {
 		return {
+			scope: true,
 			restrict:'E',
 			link: function(scope,element,attrs){
-				loader.getData('dude',{id:attrs.id}).then(function(d){
-					scope.name= d.firstname+" "+d.lastname;
+				var d = $q.defer();
+				d.promise.then(function() {
+					if(scope.$root.names[attrs.id]) return "yo!";
+					else {
+						loader.getData('dude',{id:attrs.id}).then(function(data){
+							scope.$root.names[attrs.id] = data.firstname+" "+data.lastname;
+							return d.firstname+" "+d.lastname;
+						});
+					}
 				});
+				return d.promise;
 
 				
 
