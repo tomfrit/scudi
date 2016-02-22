@@ -138,7 +138,7 @@ class ScudiStrava extends WireData implements Module {
 
 	private function page2Class(Page $page) {
 		$ret = new \StdClass();
-		$fields = array('title','athlete','average_cadence','average_heartrate','average_temp','average_watts','calories','device_watts','athlete_count','distance','elapsed_time','gear_id','kilojoules','max_heartrate','moving_time','suffer_score','total_elevation_gain','type','map','start_date_local');
+		$fields = array('title','athlete','average_cadence','average_heartrate','average_temp','average_watts','calories','device_watts','athlete_count','distance','elapsed_time','gear_id','kilojoules','max_heartrate','moving_time','suffer_score','total_elevation_gain','type','map','start_date_local','average_speed');
 		$ret->id = $page->id;
 
 		foreach($fields as $fi) {
@@ -151,7 +151,7 @@ class ScudiStrava extends WireData implements Module {
 		$ret = new \StdClass();
 		$fields = array('name','firstname','lastname');
 		$ret->id = $user->id;
-		$ret->avatar=$user->avatar->httpUrl;
+		if($user->avatar) $ret->avatar=$user->avatar->httpUrl;
 		foreach($fields as $fi) {
 			$ret->{$fi} = $user->get($fi);
 		}

@@ -34,3 +34,5 @@
 2016-02-22 16:39:16	tomfrit	http://scuderia.local/admin/login/logout/	Logout for 'tomfrit'
 2016-02-22 16:39:19	thomas	http://scuderia.local/admin/login/	Successful login for 'thomas'
 2016-02-22 16:40:16	tomfrit	http://scuderia.local/token_exchange/?state=&code=34e675c23da3f8871e66040ceddd53a54b59de55	Successful login for 'tomfrit'
+2016-02-22 20:06:29	tomfrit	http://scuderia.local/token_exchange/?state=&code=477b9f69f34e4e6a0b65ba96a42e5e2c8891ae95	Successful login for 'tomfrit'
+2016-02-22 21:18:54	thomas	http://scuderia.local/admin/login/	Successful login for 'thomas'

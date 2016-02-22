@@ -63,7 +63,7 @@
   app.run(kickstart);
   kickstart.$inject=['$window','$state','$rootScope','loader','pendingRequests','$location','menuHelper','$window'];
   function kickstart($window,$state,$rootScope,loader,pendingRequests,$location,menuHelper,$window) {
-    $rootScope.names = {};
+    $rootScope.riders = {};
     $rootScope.basis = {};
     $rootScope.facebookAppId = '392684544274301';
     $rootScope.$on('$stateChangeStart',function(evt, toState, toParams, fromState, fromParams){

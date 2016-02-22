@@ -1,9 +1,11 @@
-<table class="uk-table">
-	<tr ng-repeat="item in rides">
-		<td>{{(item.start_date_local*1000) | date:'dd.MM.yyyy HH:mm'}}</td>
-		<td>{{item.title}}</td>
-		<td><athlete id="{{item.athlete}}">{{name}}</athlete></td>
-		<td>{{item.distance/1000 | number:2}}km</td>
-		<td>{{item.moving_time | secondsToDateTime | date:'HH:mm:ss'}}</td>
-	</tr>
-</table>
+<div class="uk-width-1-1 uk-panel uk-panel-box">
+	<table class="uk-table">
+		<tr ng-repeat="item in rides | orderBy:'-start_date_local'">
+			<td>{{(item.start_date_local*1000) | date:'dd.MM.yyyy HH:mm'}}</td>
+			<td>{{item.title}}</td>
+			<td><athlete strava-id="{{item.athlete}}">{{rider.firstname}} {{rider.lastname}}</athlete></td>
+			<td>{{item.distance/1000 | number:2}}km</td>
+			<td>{{item.moving_time | secondsToDateTime | date:'HH:mm:ss'}}</td>
+		</tr>
+	</table>
+</div>

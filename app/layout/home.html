@@ -1,9 +1,13 @@
-<div class="uk-grid uk-grid-1-1 uk-grid-medium-1-2">
-	<div class="uk-panel uk-panel-box">
+<div class="uk-grid">
+	<div class="uk-width-1-5 uk-panel uk-panel-box">
 		<div class="uk-panel-teaser">
 			<img ng-src="{{dude.avatar}}">
 		</div>
 		{{dude.firstname}} {{dude.lastname}}
 	</div>
-	<div scudi-list></div>
+	<div class="uk-width-4-5">
+		<div scoreboard></div>
+		<div scudi-list></div>
+	</div>
+</div>
 
