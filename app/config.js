@@ -45,7 +45,18 @@
         }]
       }
     })
-
+    .state('login',{
+      url:'/login',
+      views: {
+        'main': {
+          templateUrl:'/app/layout/login.html'
+        },
+        'offcanvas': {
+          template:''
+        }
+      }
+      
+    })
     .state("otherwise", {
       parent:'root',
       url: "*path",

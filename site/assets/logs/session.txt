@@ -36,3 +36,7 @@
 2016-02-22 16:40:16	tomfrit	http://scuderia.local/token_exchange/?state=&code=34e675c23da3f8871e66040ceddd53a54b59de55	Successful login for 'tomfrit'
 2016-02-22 20:06:29	tomfrit	http://scuderia.local/token_exchange/?state=&code=477b9f69f34e4e6a0b65ba96a42e5e2c8891ae95	Successful login for 'tomfrit'
 2016-02-22 21:18:54	thomas	http://scuderia.local/admin/login/	Successful login for 'thomas'
+2016-02-23 10:39:14	thomas	http://scuderia.local/admin/login/	Successful login for 'thomas'
+2016-02-23 10:59:44	tomfrit	http://scuderia.local/token_exchange/?state=&code=fd9d0883fae1bfd8a6be8f1fb9dce3f832f2e946	Successful login for 'tomfrit'
+2016-02-23 11:09:02	tomfrit	http://scuderia.local/admin/login/logout/	Logout for 'tomfrit'
+2016-02-23 11:09:13	tomfrit	http://scuderia.local/token_exchange/?state=&code=0a64706b736722885fc18fb39ed370078f5602c8	Successful login for 'tomfrit'

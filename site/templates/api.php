@@ -33,10 +33,4 @@
 
 
 	}
-	else {
-		?>
-		<a href="https://www.strava.com/oauth/authorize?client_id=9026&response_type=code&redirect_uri=http://scuderia.local/token_exchange/&approval_prompt=force"><img src="/img/LogInWithStrava.png"></a>
-		<?
-
-
-	}
+	else echo '{"error":"no authentification","status":401}';

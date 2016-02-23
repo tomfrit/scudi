@@ -1,12 +1,28 @@
 <div class="uk-width-1-1 uk-panel uk-panel-box">
+	<button class="uk-button" ng-click="thisWeek()" ng-class="{'uk-button-primary':sb==='week'}">Diese Woche</button>
+	<button class="uk-button" ng-click="thisMonth()" ng-class="{'uk-button-primary':sb==='month'}">Diesen Monat</button>
 	<table class="uk-table">
-		<tr ng-repeat="item in score | orderBy:'-distance'">
+		<thead>
+			<tr>
+				<th>Rang</th>
+				<th>Name</th>
+				<th><a href="" ng-click="order('-distance')" ng-class="{'underline':ordnung==='-distance'}">Distanz</a></th>
+				<th><a href="" ng-click="order('-total_elevation_gain')" ng-class="{'underline':ordnung==='-total_elevation_gain'}">Höhenmeter</a></th>
+				<th><a href="" ng-click="order('-moving_time')" ng-class="{'underline':ordnung==='-moving_time'}">Zeit</a></th>
+				<th><a href="" ng-click="order('-average_speed')" ng-class="{'underline':ordnung==='-average_speed'}">Schnitt</a></th>
+				<th><a href="" ng-click="order('-max_distance')" ng-class="{'underline':ordnung==='-max_distance'}">Längste</a></th>
+			</tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="item in score | orderBy:ordnung">
 			<td>{{$index+1}}</td>
-			<td><athlete strava-id="{{item.athlete}}">{{rider.firstname}} {{rider.lastname}}</athlete></td>
+			<td><athlete strava-id="{{item.athlete}}"><b>{{rider.firstname}} {{rider.lastname}}</b></athlete></td>
 			<td>{{item.distance/1000 | number:2}} km</td>
 			<td>{{item.total_elevation_gain | number:2}} m</td>
 			<td>{{item.moving_time | secondsToDateTime | date:'dd HH:mm:ss'}}</td>
 			<td>{{item.average_speed | number:2}} km/h</td>
+			<td>{{item.max_distance / 1000 | number:2}} km</td>
 		</tr>
+		</tbody>
 	</table>
 </div>

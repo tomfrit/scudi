@@ -47,7 +47,7 @@ function add_user($u) {
 	if(!$user->id) $user = new \ProcessWire\User();
 	$user->of(false);
 	$user->name = $data->athlete->username;
-	$user->addRole("guest");
+	$user->addRole("strava");
 	$user->email = $data->athlete->email;
 	$user->strava_id = $data->athlete->id;
 	$user->access_token = $data->access_token;

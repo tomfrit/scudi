@@ -47,7 +47,7 @@ function add_user($u) {
 	if(!$user->id) $user = new User();
 	$user->of(false);
 	$user->name = $data->athlete->username;
-	$user->addRole("guest");
+	$user->addRole("strava");
 	$user->email = $data->athlete->email;
 	$user->strava_id = $data->athlete->id;
 	$user->access_token = $data->access_token;
@@ -56,6 +56,7 @@ function add_user($u) {
 	$user->pass="wurst";
 	$user->save();
 	$user->avatar->removeAll();
+	$user->save('avatar');
 	$user->avatar = $data->athlete->profile;
 
 	$user->save();
