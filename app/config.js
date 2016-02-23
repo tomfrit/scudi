@@ -13,12 +13,8 @@
       abstract: true,
       views: {
         'main': {
-          template:'<div class="uk-grid" ng-class="{loading:loading}" ui-view></div>',
+          template:'<div class="uk-container uk-container-center" ng-class="{loading:loading}" ui-view></div>',
           controller:'rootCtrl'
-        },
-        'offcanvas': {
-          templateUrl:'/app/layout/offcanvas.html',
-          controller:'menuCtrl'
         }
       },
       resolve : {
@@ -56,13 +52,6 @@
         }
       }
       
-    })
-    .state("otherwise", {
-      parent:'root',
-      url: "*path",
-        templateUrl: function(params) {
-        return '/kundentemplates/'+params.path;
-      }
     });
 
     
@@ -75,27 +64,17 @@
   kickstart.$inject=['$window','$state','$rootScope','loader','pendingRequests','$location','menuHelper','$window'];
   function kickstart($window,$state,$rootScope,loader,pendingRequests,$location,menuHelper,$window) {
     $rootScope.riders = {};
-    $rootScope.basis = {};
     $rootScope.facebookAppId = '392684544274301';
     $rootScope.$on('$stateChangeStart',function(evt, toState, toParams, fromState, fromParams){
       //console.log($location.path());
       $window.ga('send', 'pageview', { page: $location.url() });
       pendingRequests.cancelAll();
-      $rootScope.loading=true;        
-      $rootScope.product = 0;
-      if(toState.name == 'home') {
-        toParams = {main:'',sub:'',product:''};
-      }
-      else {
-        if(!toParams.main) toParams.main = fromParams.main;
-        else if(!fromParams == 'undefinded') toParams.sub='';
-      }
+      $rootScope.loading=true;
 
     });
     
     $rootScope.$on('$stateChangeStart', 
       function(event, toState, toParams, fromState, fromParams){ 
-        UIkit.offcanvas.hide([force = false])
         $rootScope.loading=true;   
         //console.debug(toParams);
         //event.preventDefault(); 
@@ -107,8 +86,6 @@
     $rootScope.$on('$stateChangeSuccess', 
       function(event, toState, toParams, fromState, fromParams){ 
         $rootScope.loading=false;   
-        menuHelper.setParams(toParams,fromParams);
-        menuHelper.setState(toState.name,fromState.name);
         //$rootScope.$broadcast('stateParams',toParams);
         
     });

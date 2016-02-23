@@ -1,7 +1,7 @@
-<div class="uk-width-1-1 uk-panel uk-panel-box">
+<div class="uk-width-1-1 uk-panel uk-panel-box uk-margin-bottom">
 	<button class="uk-button" ng-click="thisWeek()" ng-class="{'uk-button-primary':sb==='week'}">Diese Woche</button>
 	<button class="uk-button" ng-click="thisMonth()" ng-class="{'uk-button-primary':sb==='month'}">Diesen Monat</button>
-	<table class="uk-table">
+	<table class="uk-table uk-width-1-1">
 		<thead>
 			<tr>
 				<th>Rang</th>
@@ -24,5 +24,26 @@
 			<td>{{item.max_distance / 1000 | number:2}} km</td>
 		</tr>
 		</tbody>
+	</table>
+</div>
+<div class="uk-width-1-1 uk-panel uk-panel-box">
+	<table class="uk-table uk-width-1-1">
+		<tr ng-repeat="item in rides | orderBy:'-start_date_local'">
+			<td style="width:100px">
+				<athlete strava-id="{{item.athlete}}">
+					<img ng-src="{{rider.avatar}}" class="uk-thumbnail uk-thumbnail-mini" style="width:70px">
+				</athlete>
+			</td>
+			<td>
+				<p class="uk-text-small uk-text.muted">{{(item.start_date_local*1000) | date:'dd.MM.yyyy HH:mm'}}</p>
+				<p class="uk-text-bold">{{item.title}}</p>
+				<p athlete strava-id="{{item.athlete}}">{{rider.firstname}} {{rider.lastname}}</p>
+				<p class="uk-text-muted">{{item.distance/1000 | number:2}}km {{item.moving_time | secondsToDateTime | date:'HH:mm:ss'}} {{item.total_elevation_gain}}m</p>
+
+			</td>
+			<td style="width:140px">
+				<img ng-if="item.map" ng-src="http://maps.googleapis.com/maps/api/staticmap?sensor=false&size=130x130&path=weight:3%7Ccolor:red%7Cenc:{{item.map}}&key=AIzaSyB5vK8TcQVN3RHyhbAQ1HDHNFAWBcVgekI">
+			</td>
+		</tr>
 	</table>
 </div>

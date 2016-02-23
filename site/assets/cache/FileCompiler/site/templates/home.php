@@ -68,9 +68,7 @@
         <div class="content-wrapper uk-grid uk-margin-large-top" style="margin-left:-15px">
             <div class="uk-width-1-1 uk-text-center uk-text-danger" ng-if="loading"><i class="uk-icon uk-icon-refresh uk-icon-spin"></i> Loading</div>
             <div class="uk-width-1-1" ui-view="main">
-                <div class="uk-container-center uk-width-3-4 uk-panel uk-panel-box uk-margin-top">
-                	<a href="https://www.strava.com/oauth/authorize?client_id=9026&response_type=code&redirect_uri=http://scuderia.local/token_exchange/&approval_prompt=force"><img src="/img/LogInWithStrava.png"></a>
-                </div>
+                
             </div>
             
         </div>

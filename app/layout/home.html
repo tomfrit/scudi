@@ -1,13 +1,18 @@
 <div class="uk-grid">
-	<div class="uk-width-1-5 uk-panel uk-panel-box">
-		<div class="uk-panel-teaser">
-			<img ng-src="{{dude.avatar}}">
+	<div class="uk-width-1-1">
+		<div class="uk-panel uk-panel-box uk-margin-bottom">
+			<div class="uk-float-left">
+				<img class="uk-thumbnail" ng-src="{{dude.avatar}}">
+			</div>
+			<div class="uk-margin-left uk-float-left">
+				<p class="uk-text-large uk-text-bold">{{dude.firstname}} {{dude.lastname}}</p>
+				<button class="uk-button" ng-click="logout()">Abmelden</button>
+			</div>
 		</div>
-		{{dude.firstname}} {{dude.lastname}}
+		
 	</div>
-	<div class="uk-width-4-5">
-		<div scoreboard></div>
-		<div scudi-list></div>
+	<div class="uk-width-1-1">
+		<div class="uk-width-1-1 uk-margin-bottom" scoreboard></div>
 	</div>
 </div>
 

@@ -37,6 +37,7 @@
 				}
 				function populateScoreboard(timerange) {
 					score = {};
+					rides = [];
 					angular.forEach($scope.$root.rides,function(ride){
 						
 						if(timerange.start<(ride.start_date_local*1000) && (ride.start_date_local*1000)<timerange.end) {
@@ -58,6 +59,7 @@
 								if(score[ride.athlete].average_speed>0) score[ride.athlete].moving = 1;
 								else score[ride.athlete].moving = 0;
 							}
+							rides.push(ride);
 						}
 					});
 					scoreboard = [];
@@ -65,6 +67,7 @@
 						scoreboard.push({'athlete':key,'distance':val.distance,'total_elevation_gain':val.total_elevation_gain,'average_speed':val.average_speed/val.moving,'moving_time':val.moving_time,'max_distance':val.max_distance});
 					});
 					$scope.score = scoreboard;
+					$scope.rides = rides;
 				}
 				function getMonday() {
 					var curr = new Date;
@@ -92,7 +95,7 @@
 	function athlete(loader,$q) {
 		return {
 			scope: true,
-			restrict:'E',
+			restrict:'AE',
 			link: function(scope,ele,attrs){
       			var athlete = {};
       			var d = $q.defer();

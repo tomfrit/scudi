@@ -2,9 +2,12 @@
   'use strict'; 
   var app = angular.module('scudiClub');
   app.controller('homeCtrl',homeCtrl);
-  homeCtrl.$inject=['$scope','dude'];
-  function homeCtrl($scope,dude) {
+  homeCtrl.$inject=['$scope','dude','loader'];
+  function homeCtrl($scope,dude,loader) {
     $scope.dude=dude;
+    $scope.logout = function() {
+      loader.getData('logout',{}).then(function(data){});
+    }
 
   }
 
@@ -15,13 +18,5 @@
       $rootScope.rides = strava;
   }
 
-
-
-  app.controller('menuCtrl',menuCtrl);
-  menuCtrl.$inject=['$scope'];
-  function menuCtrl($scope) {
-
-
-  }
 
 })(jQuery,jQuery.UIkit);
