@@ -38,3 +38,4 @@
 2016-02-22 16:39:32	thomas	http://scuderia.local/admin/module/?reset=1	Saved module info caches
 2016-02-22 16:39:37	thomas	http://scuderia.local/admin/module/	Installed module 'ScudiStrava'
 2016-02-22 16:39:37	thomas	http://scuderia.local/admin/module/	Saved module info caches
+2016-02-24 14:09:50	thomas	http://scuderia.local/admin/setup/upgrades/	Saved module info caches

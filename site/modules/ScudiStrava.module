@@ -55,6 +55,27 @@ class ScudiStrava extends WireData implements Module {
 		return $data;
 	}
 
+	public function importUserRides() {
+		if(!$this->access_token) return false;
+		if(!$this->user->last_login) $since = "1451602800";
+		else $since = $this->user->last_login;
+		$url = 'https://www.strava.com/api/v3/athlete/activities?after='.$since.'&per_page=200';
+		$auth = "authorization: Bearer ".$this->access_token;
+		$ch = curl_init();
+		curl_setopt($ch,CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array($auth));
+		curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+		$result = curl_exec($ch);
+		curl_close($ch);
+		$data = json_decode($result);
+		foreach($data as $ride) {
+			$this->addRide($ride);
+		}
+		$this->user->last_login=time();
+		$this->user->save();
+		return $data;
+	}
+
 	public function logout() {
 		$this->session->remove('access_token');
 		$this->session->remove('strava_id');
@@ -66,6 +87,7 @@ class ScudiStrava extends WireData implements Module {
 		$this->importRides();
 		$selector = array();
 		$selector[] = "template=ride";
+		$selector[] = "type=Ride";
 		/*
 		if($start_date) $selector[] = "start_date_local>".$start_date;
 		if($end_date) $selector[] = "start_date_local<".$end_date;
@@ -80,6 +102,7 @@ class ScudiStrava extends WireData implements Module {
 		}
 		return $return;
 	}
+
 
 	private function addRide($ride) {
 		$r=$this->pages->get('ride_id='.$ride->id);
@@ -151,7 +174,7 @@ class ScudiStrava extends WireData implements Module {
 
 	private function page2Class(Page $page) {
 		$ret = new \StdClass();
-		$fields = array('title','athlete','average_cadence','average_heartrate','average_temp','average_watts','calories','device_watts','athlete_count','distance','elapsed_time','gear_id','kilojoules','max_heartrate','moving_time','suffer_score','total_elevation_gain','type','map','start_date_local','average_speed');
+		$fields = array('title','athlete','average_cadence','average_heartrate','average_temp','average_watts','calories','device_watts','athlete_count','distance','elapsed_time','gear_id','kilojoules','max_heartrate','moving_time','suffer_score','total_elevation_gain','type','map','start_date_local','average_speed','ride_id');
 		$ret->id = $page->id;
 
 		foreach($fields as $fi) {
@@ -162,7 +185,7 @@ class ScudiStrava extends WireData implements Module {
 
 	private function user2Class(User $user) {
 		$ret = new \StdClass();
-		$fields = array('name','firstname','lastname');
+		$fields = array('name','firstname','lastname','strava_id');
 		$ret->id = $user->id;
 		if($user->avatar) $ret->avatar=$user->avatar->httpUrl;
 		foreach($fields as $fi) {

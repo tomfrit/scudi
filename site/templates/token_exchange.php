@@ -28,6 +28,8 @@ if($input->get->code) {
 	curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
 //execute post
 	$result = curl_exec($ch);
+
+	#print_r($result);die(0);
 	$new = add_user($result);
 //close connection
 	curl_close($ch);
@@ -42,6 +44,16 @@ else $session->redirect('/');
 
 function add_user($u) {
 	$data = json_decode($u);
+	$member = false;
+	foreach($data->athlete->clubs as $club) {
+		if($club->id==340929) {
+			$member=true;
+		}
+	}
+	if(!$member) {
+		wire('session')->error("Du bist kein Mitglied des Scuderia Strava-Clubs");
+		wire('session')->redirect('/login');
+	}
 	#print_r($data);
 	$user = wire('users')->get('strava_id='.$data->athlete->id);
 	if(!$user->id) $user = new User();

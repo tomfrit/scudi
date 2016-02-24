@@ -4,7 +4,7 @@
 		$strava->setAccessToken($user->access_token);
 		$strava->setStravaId($user->strava_id);
 		$func = $input->urlSegment1;
-		$f = array('rides'=>'getRides','dude'=>'getDude','init'=>'importRides','dude'=>'getDude','logout'=>'logout');
+		$f = array('rides'=>'getRides','dude'=>'getDude','init'=>'importRides','dude'=>'getDude','logout'=>'logout','importUserRides'=>'importUserRides');
 		$method = $f{$func};
 		echo json_encode($strava->$method());
 		#print_r(f{$func});

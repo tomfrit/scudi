@@ -1,18 +1,17 @@
 <div class="uk-grid">
-	<div class="uk-width-1-1">
-		<div class="uk-panel uk-panel-box uk-margin-bottom">
-			<div class="uk-float-left">
-				<img class="uk-thumbnail" ng-src="{{dude.avatar}}">
-			</div>
-			<div class="uk-margin-left uk-float-left">
-				<p class="uk-text-large uk-text-bold">{{dude.firstname}} {{dude.lastname}}</p>
-				<button class="uk-button" ng-click="logout()">Abmelden</button>
-			</div>
-		</div>
-		
-	</div>
+ <div id="message" class="uk-width-1-1" style="display:none;"><?php if(count($notices)) include("./notices.inc"); ?></div>
+	<a href="#offc" class="uk-navbar-toggle" data-uk-offcanvas></a>
 	<div class="uk-width-1-1">
 		<div class="uk-width-1-1 uk-margin-bottom" scoreboard></div>
+	</div>
+</div>
+<div id="offc" class="uk-offcanvas">
+	<div class="uk-offcanvas-bar">
+		<div class="uk-panel uk-panel-box uk-margin-bottom">
+			<img class="uk-thumbnail" ng-src="{{dude.avatar}}">
+			<p class="uk-text-large uk-text-bold">{{dude.firstname}} {{dude.lastname}}</p>
+			<button class="uk-button" ng-click="logout()">Abmelden</button>
+		</div>
 	</div>
 </div>
 

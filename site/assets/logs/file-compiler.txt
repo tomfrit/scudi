@@ -1,1 +1,4 @@
 2016-02-22 09:42:03	guest	http://scuderia/	Copy new version of source file to target file: /site/templates/home.php => /site/assets/cache/FileCompiler/site/templates/home.php
+2016-02-24 11:03:48	tomfrit	http://scuderia.local/	Copy new version of source file to target file: /site/templates/home.php => /site/assets/cache/FileCompiler/site/templates/home.php
+2016-02-24 11:03:49	tomfrit	http://scuderia.local/	Copy new version of source file to target file: /site/templates/api.php => /site/assets/cache/FileCompiler/site/templates/api.php
+2016-02-24 11:03:49	tomfrit	http://scuderia.local/	Copy new version of source file to target file: /site/templates/token_exchange.php => /site/assets/cache/FileCompiler/site/templates/token_exchange.php

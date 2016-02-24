@@ -15,7 +15,7 @@
   app.controller('rootCtrl',rootCtrl);
   rootCtrl.$inject=['$rootScope','strava'];
   function rootCtrl($rootScope,strava) {
-      $rootScope.rides = strava;
+      $rootScope.rides = strava[0];
   }
 
 

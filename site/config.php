@@ -78,5 +78,5 @@ $config->timezone = 'Europe/Berlin';
  * Installer: HTTP Hosts Whitelist
  * 
  */
-$config->httpHosts = array('scuderia', 'scuderia.local', 'scuderia.enizehates.de');
+$config->httpHosts = array('scu.enizehates.de');
 

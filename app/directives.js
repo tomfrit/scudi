@@ -21,6 +21,7 @@
 				timerange = {'start':getMonday(),'end':now}
 				$scope.sb='week';
 				$scope.ordnung='-distance';
+				$scope.ordnungText = "Distanz";
 				$scope.thisWeek = function() {
 					timerange = {'start':getMonday(),'end':now}
 					$scope.sb='week';
@@ -32,8 +33,9 @@
 					populateScoreboard(timerange);
 				}
 				
-				$scope.order=function(ordnung) {
+				$scope.order=function(ordnung,ordnungText) {
 					$scope.ordnung = ordnung;
+					$scope.ordnungText = ordnungText;
 				}
 				function populateScoreboard(timerange) {
 					score = {};
@@ -64,7 +66,7 @@
 					});
 					scoreboard = [];
 					angular.forEach(score,function(val,key) {
-						scoreboard.push({'athlete':key,'distance':val.distance,'total_elevation_gain':val.total_elevation_gain,'average_speed':val.average_speed/val.moving,'moving_time':val.moving_time,'max_distance':val.max_distance});
+						scoreboard.push({'athlete':key,'distance':val.distance,'total_elevation_gain':val.total_elevation_gain,'average_speed':val.average_speed/val.moving,'moving_time':val.moving_time,'max_distance':val.max_distance,'ride_id':val.ride_id});
 					});
 					$scope.score = scoreboard;
 					$scope.rides = rides;
@@ -119,7 +121,13 @@
 
 	app.filter('secondsToDateTime', [function() {
     	return function(seconds) {
-        	return new Date(1970, 0, 1).setSeconds(seconds);
+    		var hours = Math.floor(seconds / 3600);
+    		seconds %= 3600;
+    		minutes = Math.floor(seconds / 60);
+    		seconds = seconds %60;
+    		if(minutes<10) minutes = "0"+minutes;
+    		if(seconds<10) seconds = "0"+seconds;
+        	return hours+":"+minutes+":"+seconds;
     	};
 	}]);
 

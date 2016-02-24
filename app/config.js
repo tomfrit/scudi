@@ -18,13 +18,15 @@
         }
       },
       resolve : {
-        strava:['loader',function(loader) {
+        strava:['loader','$q',function(loader,$q) {
           progress=20;
           //$('#status').html("Lade Daten: ");
           $("#progress").css("width",progress+"%");
           var rides = loader.getData('rides');
-          rides.then(function(d){addStatus("Rides.");});
-          return rides;//loader.getData('getMenu').then(function(d) { addStatus("Done.");return d.data.menu; });
+          var user = loader.getData('importUserRides');
+          rides.then(function(d){addStatus("Clubdaten.");});
+          rides.then(function(d){addStatus("Nutzerdaten.");});
+          return $q.all([rides,user]);//loader.getData('getMenu').then(function(d) { addStatus("Done.");return d.data.menu; });
         }]
       }
     })

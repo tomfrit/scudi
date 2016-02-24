@@ -66,9 +66,14 @@
     <div class="all">
 
         <div class="content-wrapper uk-grid uk-margin-large-top" style="margin-left:-15px">
-            <div class="uk-width-1-1 uk-text-center uk-text-danger" ng-if="loading"><i class="uk-icon uk-icon-refresh uk-icon-spin"></i> Loading</div>
             <div class="uk-width-1-1" ui-view="main">
-                
+                <div class="uk-container-center uk-width-3-4 uk-panel uk-panel-box uk-margin-top">
+                	<div class="uk-text-center"><img src="/img/scudi.jpg"></div>
+                	<p id="status" class="uk-text-muted">Loading.</p>
+                	<div class="uk-progress uk-progress-striped uk-active">
+                    	<div id="progress" class="uk-progress-bar"></div>
+                	</div>
+                </div>
             </div>
             
         </div>

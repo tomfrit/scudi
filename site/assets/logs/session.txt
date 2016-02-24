@@ -48,3 +48,28 @@
 2016-02-23 15:02:42	tomfrit	http://scuderia.local/token_exchange/?state=&code=3daf63ef7a4820e6b7aa7323cfcd2904724a1153	Successful login for 'tomfrit'
 2016-02-23 16:35:26	tomfrit	http://scuderia.local/token_exchange/?state=&code=6e779cc617644420333bb49b49a6c52b9c3cd001	Successful login for 'tomfrit'
 2016-02-23 16:47:06	tomfrit	http://scuderia.local/token_exchange/?state=&code=82267a11ec6b90e9d1f705922f22444839d51de3	Successful login for 'tomfrit'
+2016-02-24 11:05:28	?	?	User 'tomfrit' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)
+2016-02-24 11:05:39	tomfrit	http://scuderia.local/token_exchange/?state=&code=c6e838acd9111518ab3a7139b29bed06d2b5cfca	Successful login for 'tomfrit'
+2016-02-24 11:18:58	?	?	User 'tomfrit' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)
+2016-02-24 11:19:06	tomfrit	http://scuderia.local/token_exchange/?state=&code=bd32326018167d3c9808a50b686bcf0b27f6450b	Successful login for 'tomfrit'
+2016-02-24 11:25:37	?	?	User 'tomfrit' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)
+2016-02-24 11:26:00	tomfrit	http://scuderia.local/token_exchange/?state=&code=e48aa55c1c3704d1fec48d794511d9a571475d5b	Successful login for 'tomfrit'
+2016-02-24 11:31:37	?	?	User 'tomfrit' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)
+2016-02-24 11:31:43	tomfrit	http://scuderia.local/token_exchange/?state=&code=1a8e839bdeebf083eb31ace71df69b3a3b073728	Successful login for 'tomfrit'
+2016-02-24 11:34:31	?	?	User 'tomfrit' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)
+2016-02-24 11:34:39	tomfrit	http://scuderia.local/token_exchange/?state=&code=bf7e67328e3274c8bbecdb0dc50b00c023e59da3	Successful login for 'tomfrit'
+2016-02-24 12:25:28	?	?	User 'tomfrit' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)
+2016-02-24 12:25:35	tomfrit	http://scuderia.local/token_exchange/?state=&code=698ed29eb0b0c9b35a1b8c8f316fe1b81a6b82d7	Successful login for 'tomfrit'
+2016-02-24 12:46:07	?	?	User 'tomfrit' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)
+2016-02-24 12:46:15	tomfrit	http://scuderia.local/token_exchange/?state=&code=b3a79e43f4f10fcd30e77a66ab62847af439d1e1	Successful login for 'tomfrit'
+2016-02-24 12:57:28	?	?	User 'tomfrit' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)
+2016-02-24 12:57:37	tomfrit	http://scuderia.local/token_exchange/?state=&code=c9eab3a5fa8819a3ed6fba36193aa13ab48acf45	Successful login for 'tomfrit'
+2016-02-24 14:09:22	guest	http://scuderia.local/admin/login/	Error: Failed login for 'tomfrit' - Unknown user: tomfrit
+2016-02-24 14:09:31	thomas	http://scuderia.local/admin/login/	Successful login for 'thomas'
+2016-02-24 14:24:04	tomfrit	http://scu.enizehates.de/token_exchange/?state=&code=edea22dbca78448e9a3a8e201106f9e4c7437cea	Successful login for 'tomfrit'
+2016-02-24 14:38:56	tomfrit	http://scu.enizehates.de/admin/login/logout/	Logout for 'tomfrit'
+2016-02-24 14:39:02	thomas	http://scu.enizehates.de/admin/login/	Successful login for 'thomas'
+2016-02-24 14:44:47	tomfrit	http://scu.enizehates.de/token_exchange/?state=&code=20ae961c89871a166887af1eafdafe443c72e722	Successful login for 'tomfrit'
+2016-02-24 15:16:29	tomfrit	http://scu.enizehates.de/api/logout/	Logout for 'tomfrit'
+2016-02-24 15:21:47	tomfrit	http://scu.enizehates.de/token_exchange/?state=&code=3e1c7845c13b6a49afd0d34320980b9a8568a5c2	Successful login for 'tomfrit'
+2016-02-24 15:28:33	tomfrit	http://scu.enizehates.de/api/logout/	Logout for 'tomfrit'
