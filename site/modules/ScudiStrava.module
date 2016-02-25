@@ -163,8 +163,10 @@ class ScudiStrava extends WireData implements Module {
 				$dude->firstname = $data->firstname;
 				$dude->lastname = $data->lastname;
 				$dude->save();
+				$dude->avatar->removeAll();
+				$dude->save('avatar');
 				if($data->profile!='avatar/athlete/large.png') $dude->avatar = $data->profile;
-				$dude->save();
+				$dude->save('avatar');
 				$dude->of(true);
 
 			}
