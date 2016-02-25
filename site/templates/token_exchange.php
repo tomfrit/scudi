@@ -59,6 +59,7 @@ function add_user($u) {
 	if(!$user->id) $user = new User();
 	$user->of(false);
 	$user->name = $data->athlete->username;
+	if(!$data->athlete->username) $user->name = "strava".$data->athlete->id;
 	$user->addRole("strava");
 	$user->email = $data->athlete->email;
 	$user->strava_id = $data->athlete->id;
@@ -69,7 +70,7 @@ function add_user($u) {
 	$user->save();
 	$user->avatar->removeAll();
 	$user->save('avatar');
-	$user->avatar = $data->athlete->profile;
+	if($data->athlete->profile != 'avatar/athlete/large.png') $user->avatar = $data->athlete->profile;
 
 	$user->save();
 	$user->of(true);

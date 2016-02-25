@@ -149,6 +149,7 @@ class ScudiStrava extends WireData implements Module {
 			$dude = new User;
 			$dude->of(false);
 			$dude->name = $data->username;
+			if(!$data->username) $dude->name = "strava".$id;
 			$dude->addRole("strava");
 			$dude->strava_id = $data->id;
 		}
