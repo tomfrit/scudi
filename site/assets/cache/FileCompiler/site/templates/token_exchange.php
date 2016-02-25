@@ -46,7 +46,7 @@ function add_user($u) {
 	$data = json_decode($u);
 	$member = false;
 	foreach($data->athlete->clubs as $club) {
-		if($club->id==340929) {
+		if($club->id==34092) {
 			$member=true;
 		}
 	}

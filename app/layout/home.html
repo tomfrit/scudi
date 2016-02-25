@@ -2,7 +2,73 @@
  <div id="message" class="uk-width-1-1" style="display:none;"><?php if(count($notices)) include("./notices.inc"); ?></div>
 	<a href="#offc" class="uk-navbar-toggle" data-uk-offcanvas></a>
 	<div class="uk-width-1-1">
-		<div class="uk-width-1-1 uk-margin-bottom" scoreboard></div>
+		<div class="uk-width-1-1 uk-margin-bottom" ng-controller="scoreboard">
+			<div class="uk-width-1-1 uk-panel uk-panel-box uk-margin-bottom">
+				<button class="uk-button uk-margin-bottom" ng-click="thisWeek()" ng-class="{'uk-button-primary':sb==='week'}">Diese Woche</button>
+				<button class="uk-button uk-margin-bottom" ng-click="thisMonth()" ng-class="{'uk-button-primary':sb==='month'}">Diesen Monat</button>
+				<div class="uk-button-dropdown uk-margin-bottom" data-uk-dropdown="{mode:'click'}">
+					<button class="uk-button uk-button-danger">Sortieren nach: {{ordnungText}} <i class="uk-icon-caret-down"></i></button>
+					<div class="uk-dropdown uk-dropdown-small">
+			        	<ul class="uk-nav uk-nav-dropdown">
+			            	<li><a href="" ng-click="order('-distance','Distanz')">Distanz</a></li>
+			            	<li><a href="" ng-click="order('-total_elevation_gain','Höhenmeter')">Höhenmeter</a></li>
+			            	<li><a href="" ng-click="order('-moving_time','Zeit')">Zeit</a></li>
+			            	<li><a href="" ng-click="order('-average_speed','Schnitt')">Schnitt</a></li>
+			            	<li><a href="" ng-click="order('-max_distance','Längste')">Längste</a>
+			        	</ul>
+			    	</div>
+				</div>
+
+				<table class="uk-table uk-width-1-1">
+					<thead>
+						<tr>
+							<th>Rang</th>
+							<th>Name</th>
+						</tr>
+					</thead>
+					<tbody>
+					<tr ng-repeat="item in score | orderBy:ordnung">
+						<td>{{$index+1}}</td>
+						<td><p athlete strava-id="{{item.athlete}}"><a class="uk-text-bold" href="//strava.com/athletes/{{item.athlete}}" target="_blank">{{rider.firstname}} {{rider.lastname}}</a></p>
+						<p class="uk-text-small">
+							<i class="uk-icon-arrow-right"></i> {{item.distance/1000 | number:2}} km 
+							<i class="uk-icon-arrow-up"></i> {{item.total_elevation_gain | number:2}}m<br>
+							<i class="uk-icon-clock-o"></i> {{item.moving_time | secondsToDateTime | date:'dd HH:mm:ss'}}
+							<i class="uk-icon-tachometer"></i> {{item.average_speed | number:2}} km/h<br>
+							Längste Radfahrt: {{item.max_distance / 1000 | number:2}} km
+						</p>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="uk-width-1-1 uk-panel uk-panel-box uk-margin-bottom" ng-repeat="item in rides | orderBy:'-start_date_local'">
+				<div class="uk-grid uk-grid-small">
+					<div class="uk-width-1-4">
+						<athlete strava-id="{{item.athlete}}">
+							<a href="//strava.com/athletes/{{rider.strava_id}}" target="_blank"><img ng-src="{{rider.avatar}}" class="uk-width-1-1 uk-margin-small-top"></a>
+						</athlete>
+					</div>
+					<div class="uk-width-3-4">
+						<p class="uk-text-small uk-text-muted">{{(item.start_date_local*1000) | date:'dd.MM.yyyy HH:mm'}}</p>
+						<a href="//strava.com/activities/{{item.ride_id}}" class="uk-text-bold" target="_blank">{{item.title}}</a></p>
+						<p athlete strava-id="{{item.athlete}}">{{rider.firstname}} {{rider.lastname}}</p>
+						<p class="uk-text-muted uk-text-small">
+							<i class="uk-icon-arrow-right"></i> {{item.distance/1000 | number:2}}km <i class="uk-icon-arrow-up"></i> {{item.total_elevation_gain}}m<br>
+							<i class="uk-icon-clock-o"></i> {{item.moving_time | secondsToDateTime | date:'HH:mm:ss'}}  <i class="uk-icon-tachometer"></i> {{item.average_speed | number:2}} km/h
+						</p>
+					</div>
+					<div class="uk-width-1-1 uk-margin-top">
+						<img ng-if="item.map" class="uk-width-1-1" ng-src="http://maps.googleapis.com/maps/api/staticmap?sensor=false&size=300x100&path=weight:3%7Ccolor:red%7Cenc:{{item.map}}&key=AIzaSyB5vK8TcQVN3RHyhbAQ1HDHNFAWBcVgekI">
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+		</div>
 	</div>
 </div>
 <div id="offc" class="uk-offcanvas">

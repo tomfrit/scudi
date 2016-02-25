@@ -21,27 +21,14 @@
     <meta property="fb:admins" content="1410691276"/>
     
     <link rel="stylesheet" href="/vendor/uikit/css/uikit.almost-flat.min.css" />
-    <link rel="stylesheet" href="/vendor/uikit/css/components/notify.almost-flat.min.css" />
-    <link rel="stylesheet" href="/vendor/uikit/css/components/slideshow.almost-flat.min.css" />
-    <link rel="stylesheet" href="/vendor/uikit/css/components/slidenav.almost-flat.min.css" />
-    <link rel="stylesheet" href="/vendor/uikit/css/components/slider.almost-flat.min.css" />
-    <link rel="stylesheet" href="/vendor/uikit/css/components/search.almost-flat.min.css" />
-    <link rel="stylesheet" href="/vendor/uikit/css/components/form-advanced.almost-flat.min.css" />
     <link rel="stylesheet" href="/vendor/uikit/css/components/progress.almost-flat.min.css" />
     <link rel="stylesheet" href="<?=$config->urls->templates?>styles/style.css?v=3" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.2/angular-resource.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.4.9/angular-locale_de-de.js"></script>
+    <!--script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.min.js"></script-->
     <script src="/vendor/uikit/js/uikit.min.js"></script>
-    <script src="/vendor/uikit//js/components/notify.min.js"></script>
-    <script src="/vendor/uikit/js/components/grid.min.js"></script>
-    <script src="/vendor/uikit/js/components/slideshow.min.js"></script>
-    <script src="/vendor/uikit/js/components/slider.min.js"></script>
     <script src="/vendor/angular-ui-router.min.js"></script>
-    <script src="/vendor/angular.dcb-img-fallback.js"></script>
-    <script src="/vendor/imagesLoaded.min.js"></script>
-    <!--script src="/vendor/angular-images-loaded.js"></script-->
-
     <script src="/app/config.js?v=02"></script>
     <script src="/app/controller.js?v=025"></script>
     <script src="/app/factory.js?v=02"></script>

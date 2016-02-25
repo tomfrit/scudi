@@ -21,3 +21,4 @@
 2016-02-23 16:38:38	tomfrit	http://scuderia.local/api/dude/?id=8213972	Unable to copy: avatar/athlete/large.png => /home/thomas/www/scuderia/site/assets/files/2801/large.png (in /wire/core/Pagefile.php line 116)
 2016-02-23 16:38:44	tomfrit	http://scuderia.local/api/dude/?id=3298707	Unable to copy: avatar/athlete/large.png => /home/thomas/www/scuderia/site/assets/files/2809/large.png (in /wire/core/Pagefile.php line 116)
 2016-02-23 16:42:08	tomfrit	http://scuderia.local/api/dude/?id=3298707	Unable to copy: avatar/athlete/large.png => /home/thomas/www/scuderia/site/assets/files/2817/large.png (in /wire/core/Pagefile.php line 116)
+2016-02-25 11:13:02	tomfrit	http://scu.enizehates.de/api/dude/	SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'data' cannot be null (in /wire/core/WireCache.php line 343)

@@ -122,7 +122,6 @@ class CacheFile extends Wire {
 	 *
 	 */
 	public function get() {
-
 		$filename = $this->buildFilename();
 		if(self::isCacheFile($filename) && $this->isCacheFileExpired($filename)) {
 			$this->removeFilename($filename); 

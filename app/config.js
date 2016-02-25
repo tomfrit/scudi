@@ -1,5 +1,5 @@
 (function($,UI) {
-	var app = angular.module('scudiClub',['ui.router','imagesLoaded','dcbImgFallback']);
+	var app = angular.module('scudiClub',['ui.router']);
   
   app.config(config);
   config.$inject = ['$stateProvider','$urlRouterProvider','$locationProvider'];

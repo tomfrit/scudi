@@ -140,36 +140,52 @@ class ScudiStrava extends WireData implements Module {
 		if(!$this->access_token) return false;
 		if(!$this->input->get->id) $id = $this->strava_id;
 		else $id = $this->input->get->id;
-		$url = 'https://www.strava.com/api/v3/athletes/'.$id;
-		$auth = "authorization: Bearer ".$this->access_token;
+		
+		
 		$dude = $this->users->get('strava_id='.$id);
+		
 		if(!$dude->id) {
-			$ch = curl_init();
-			curl_setopt($ch,CURLOPT_URL, $url);
-			curl_setopt($ch, CURLOPT_HTTPHEADER, array($auth));
-			curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-			$result = curl_exec($ch);
-			curl_close($ch);
-			$data = json_decode($result);
-			#print_r($data);die();
-			if($data->id == $id) {
-				$dude = new User;
+			$data = $this->getUserDataFromStrava($id);
+			$dude = new User;
+			$dude->of(false);
+			$dude->name = $data->username;
+			$dude->addRole("strava");
+			$dude->strava_id = $data->id;
+		}
+		else {
+			$cache = $this->modules->get('MarkupCache');
+			if(!$result = $cache->get("dude".$id,36000)) {
+				$result = $this->getUserDataFromStrava($id);
+				$cache->save($result);
+				$data = json_decode($result);
 				$dude->of(false);
-				$dude->name = $data->username;
-				$dude->addRole("strava");
-				#$dude->email = $data->email;
-				$dude->strava_id = $data->id;
 				$dude->firstname = $data->firstname;
 				$dude->lastname = $data->lastname;
 				$dude->save();
 				if($data->profile!='avatar/athlete/large.png') $dude->avatar = $data->profile;
 				$dude->save();
 				$dude->of(true);
+
 			}
-			
 		}
 		return $this->user2Class($dude);
 	}
+
+
+
+	private function getUserDataFromStrava($id) {
+		$url = 'https://www.strava.com/api/v3/athletes/'.$id;
+		$auth = "authorization: Bearer ".$this->access_token;
+		$ch = curl_init();
+		curl_setopt($ch,CURLOPT_URL, $url);
+		curl_setopt($ch, CURLOPT_HTTPHEADER, array($auth));
+		curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+		$result = curl_exec($ch);
+		curl_close($ch);
+		return $result;
+	}
+
+
 
 
 	private function page2Class(Page $page) {
