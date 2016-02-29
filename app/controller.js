@@ -30,7 +30,7 @@
 		$scope.sb='week';
 		$scope.ordnung='-distance';
 		$scope.ordnungText = "Distanz";
-		$scope.score = [];
+
 
 		populateScoreboard(timerange);
 
@@ -55,6 +55,7 @@
 		function populateScoreboard(timerange) {
 			var score = {};
 			var rides = [];
+			$scope.score = [];
 			angular.forEach($scope.$root.rides,function(ride){
 
 				if(timerange.start<(ride.start_date_local*1000) && (ride.start_date_local*1000)<timerange.end) {
@@ -83,8 +84,8 @@
 				var sb = {};
 				sb.athlete = key;
 				for(var k in val) sb[k]=val[k];
+				sb.average_speed = val.average_speed / val.moving;
 				$scope.score.push(sb);
-				//scoreboard.push({'athlete':key,'distance':val.distance,'total_elevation_gain':val.total_elevation_gain,'average_speed':val.average_speed/val.moving,'moving_time':val.moving_time,'max_distance':val.max_distance,'ride_id':val.ride_id});
 			});
 			$scope.rides = rides;
 		}
