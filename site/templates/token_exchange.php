@@ -56,17 +56,21 @@ function add_user($u) {
 	}
 	#print_r($data);
 	$user = wire('users')->get('strava_id='.$data->athlete->id);
-	if(!$user->id) $user = new User();
+	if(!$user->id) {
+		$user = new User();
+		$user->strava_id = $data->athlete->id;
+		$user->addRole("strava");
+		$user->pass="wurst";
+	}
 	$user->of(false);
 	$user->name = $data->athlete->username;
 	if(!$data->athlete->username) $user->name = "strava".$data->athlete->id;
-	$user->addRole("strava");
+	
 	$user->email = $data->athlete->email;
-	$user->strava_id = $data->athlete->id;
 	$user->access_token = $data->access_token;
 	$fields = array('firstname','lastname');
 	foreach($fields as $fi) $user->set($fi,$data->athlete->$fi);
-	$user->pass="wurst";
+	
 	$user->save();
 	$user->avatar->removeAll();
 	$user->save('avatar');

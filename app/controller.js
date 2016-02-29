@@ -30,6 +30,7 @@
 		$scope.sb='week';
 		$scope.ordnung='-distance';
 		$scope.ordnungText = "Distanz";
+		$scope.score = [];
 
 		populateScoreboard(timerange);
 
@@ -78,11 +79,13 @@
 					rides.push(ride);
 				}
 			});
-			scoreboard = [];
 			angular.forEach(score,function(val,key) {
-				scoreboard.push({'athlete':key,'distance':val.distance,'total_elevation_gain':val.total_elevation_gain,'average_speed':val.average_speed/val.moving,'moving_time':val.moving_time,'max_distance':val.max_distance,'ride_id':val.ride_id});
+				var sb = {};
+				sb.athlete = key;
+				for(var k in val) sb[k]=val[k];
+				$scope.score.push(sb);
+				//scoreboard.push({'athlete':key,'distance':val.distance,'total_elevation_gain':val.total_elevation_gain,'average_speed':val.average_speed/val.moving,'moving_time':val.moving_time,'max_distance':val.max_distance,'ride_id':val.ride_id});
 			});
-			$scope.score = scoreboard;
 			$scope.rides = rides;
 		}
 
