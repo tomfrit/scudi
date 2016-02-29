@@ -19,19 +19,23 @@
 	}
 
 	app.controller("scoreboard",scoreboard);
-	scoreboard.$inject=['$rootScope','$scope'];
-	function scoreboard($rootScope,$scope) {
+	scoreboard.$inject=['$rootScope','$scope','$filter'];
+	function scoreboard($rootScope,$scope,$filter) {
 
 		var now = new Date().getTime();
-		var timerange = {'start':getMonday(),'end':now}
+		var thisWeek = $filter('date')(now,'w');
+		//var thisWeek = new Date().getWeek();
+		var timerange = getWeekly(thisWeek);
+		$scope.currentWeek = thisWeek;
 		$scope.sb='week';
 		$scope.ordnung='-distance';
 		$scope.ordnungText = "Distanz";
 
 		populateScoreboard(timerange);
 
-		$scope.thisWeek = function() {
-			timerange = {'start':getMonday(),'end':now}
+		$scope.thisWeek = function(week) {
+			if(!week) week = thisWeek;
+			timerange = getWeekly(week);
 			$scope.sb='week';
 			populateScoreboard(timerange);
 		}
@@ -82,15 +86,21 @@
 			$scope.rides = rides;
 		}
 
-		function getMonday() {
-			var curr = new Date;
-			curr.setHours(0,0,0);
-			var first = curr.getDate() - curr.getDay()+1;
-			var last = first + 6;
-			var firstday = new Date(curr.setDate(first)).getTime();
 
-			//var lastday = new Date(curr.setDate(last)).getTime();
-			return firstday;
+		function getWeekly(week) {
+			//week=week-1;
+			var w = new Date(2016, 0, (1 + (week - 1) * 7));
+    		var dow = w.getDay();
+    		var ISOweekStart = w;
+    		if (dow <= 4)
+        		ISOweekStart.setDate(w.getDate() - w.getDay() + 1);
+    		else
+        		ISOweekStart.setDate(w.getDate() + 8 - w.getDay());
+        	var ISOweekEnd = new Date;
+        	ISOweekEnd.setHours(0,0,0,0);
+        	ISOweekEnd.setDate(ISOweekStart.getDate()+7);
+			return {start:ISOweekStart,end:ISOweekEnd};
+
 		}
 
 		function getFirstOfMonth() {
@@ -98,8 +108,9 @@
 			var firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
 			return firstDay.getTime();
 		}
-	}
 
+
+	}
 
 
 })(jQuery,jQuery.UIkit);
