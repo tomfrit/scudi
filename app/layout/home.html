@@ -4,7 +4,8 @@
 	<div class="uk-width-1-1">
 		<div class="uk-width-1-1 uk-margin-bottom" ng-controller="scoreboard">
 			<div class="uk-width-1-1 uk-panel uk-panel-box uk-margin-bottom">
-				<button class="uk-button uk-margin-bottom" ng-click="thisWeek()" ng-class="{'uk-button-primary':sb==='week'}">Diese Woche</button>
+				<button class="uk-button uk-margin-bottom" ng-click="weekly(currentWeek-1)" ng-class="{'uk-button-primary':week===currentWeek-1}">Letzte Woche</button>
+				<button class="uk-button uk-margin-bottom" ng-click="weekly(currentWeek)" ng-class="{'uk-button-primary':week===currentWeek}">Diese Woche</button>
 				<button class="uk-button uk-margin-bottom" ng-click="thisMonth()" ng-class="{'uk-button-primary':sb==='month'}">Diesen Monat</button>
 				<div class="uk-button-dropdown uk-margin-bottom" data-uk-dropdown="{mode:'click'}">
 					<button class="uk-button uk-button-danger">Sortieren nach: {{ordnungText}} <i class="uk-icon-caret-down"></i></button>

@@ -27,23 +27,25 @@
 		//var thisWeek = new Date().getWeek();
 		var timerange = getWeekly(thisWeek);
 		$scope.currentWeek = thisWeek;
-		$scope.sb='week';
+		$scope.week = thisWeek;
 		$scope.ordnung='-distance';
 		$scope.ordnungText = "Distanz";
 
 
 		populateScoreboard(timerange);
 
-		$scope.thisWeek = function(week) {
+		$scope.weekly = function(week) {
 			if(!week) week = thisWeek;
 			timerange = getWeekly(week);
 			$scope.sb='week';
+			$scope.week=week;
 			populateScoreboard(timerange);
 		}
 
 		$scope.thisMonth = function() {
 			timerange = {'start':getFirstOfMonth(),'end':now}
 			$scope.sb='month';
+			$scope.week = 0;
 			populateScoreboard(timerange);
 		}
 

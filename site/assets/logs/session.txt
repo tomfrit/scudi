@@ -83,3 +83,6 @@
 2016-02-29 10:05:14	?	?	User 'tomfrit' - Session timed out (session older than 86400 seconds) (IP: 127.0.0.1)
 2016-02-29 10:05:21	tomfrit	http://scu.enizehates.de/token_exchange/?state=&code=51be92498d9c51935f8e87b7692b4238ae45d818	Successful login for 'tomfrit'
 2016-02-29 14:01:41	thomas	http://scu.enizehates.de/admin/login/	Successful login for 'thomas'
+2016-02-29 21:33:45	?	?	User 'tomfrit' - Error: Invalid challenge value (IP: 127.0.0.1)
+2016-02-29 21:33:48	tomfrit	http://scu.enizehates.de/token_exchange/?state=&code=e66bdc3bd58d1b059aeb4aa3ae69d82731d969b2	Successful login for 'tomfrit'
+2016-02-29 21:34:16	tomfrit	http://scu.enizehates.de/token_exchange/?state=&code=e66bdc3bd58d1b059aeb4aa3ae69d82731d969b2	Successful login for 'tomfrit'
