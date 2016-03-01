@@ -102,9 +102,11 @@
         		ISOweekStart.setDate(w.getDate() - w.getDay() + 1);
     		else
         		ISOweekStart.setDate(w.getDate() + 8 - w.getDay());
-        	var ISOweekEnd = new Date;
-        	ISOweekEnd.setHours(0,0,0,0);
-        	ISOweekEnd.setDate(ISOweekStart.getDate()+7);
+        	var ISOweekEnd = new Date(ISOweekStart);
+        	//ISOweekEnd.setHours(0,0,0,0);
+        	ISOweekEnd.setDate(ISOweekEnd.getDate() + 7);
+        	console.debug(ISOweekStart);
+        	console.debug(ISOweekEnd);
 			return {start:ISOweekStart,end:ISOweekEnd};
 
 		}

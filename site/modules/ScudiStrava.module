@@ -40,18 +40,23 @@ class ScudiStrava extends WireData implements Module {
 	}
 	public function importRides() {
 		if(!$this->access_token) return false;
-		$url = 'https://www.strava.com/api/v3/clubs/34092/activities?per_page=200';
-		$auth = "authorization: Bearer ".$this->access_token;
-		$ch = curl_init();
-		curl_setopt($ch,CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_HTTPHEADER, array($auth));
-		curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-		$result = curl_exec($ch);
-		curl_close($ch);
-		$data = json_decode($result);
-		foreach($data as $ride) {
-			$this->addRide($ride);
+		$cache = $this->modules->get("MarkupCache");
+		if(!$data=$cache->get("stravaClubData",3600)) {
+			$url = 'https://www.strava.com/api/v3/clubs/34092/activities?per_page=200';
+			$auth = "authorization: Bearer ".$this->access_token;
+			$ch = curl_init();
+			curl_setopt($ch,CURLOPT_URL, $url);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, array($auth));
+			curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+			$result = curl_exec($ch);
+			curl_close($ch);
+			$data = json_decode($result);
+			foreach($data as $ride) {
+				$this->addRide($ride);
+			}
+			$cache->save($result);
 		}
+		else $data = json_decode($data);
 		return $data;
 	}
 
@@ -156,7 +161,7 @@ class ScudiStrava extends WireData implements Module {
 		}
 		else {
 			$cache = $this->modules->get('MarkupCache');
-			if(!$result = $cache->get("dude".$id,36000)) {
+			if(!$result = $cache->get("dude".$id,360000)) {
 				$result = $this->getUserDataFromStrava($id);
 				$cache->save($result);
 				$data = json_decode($result);

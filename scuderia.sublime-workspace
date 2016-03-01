@@ -1,0 +1,1592 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"th",
+				"thisWeek"
+			],
+			[
+				"ISO",
+				"ISOweekEnd"
+			],
+			[
+				"ISOw",
+				"ISOweekEnd"
+			],
+			[
+				"r",
+				"rootScope"
+			],
+			[
+				"last",
+				"last_login"
+			],
+			[
+				"import",
+				"importUserRides"
+			],
+			[
+				"ordn",
+				"ordnungText"
+			],
+			[
+				"getF",
+				"getFirstOfMonth"
+			],
+			[
+				"first",
+				"firstday"
+			],
+			[
+				"time",
+				"timerange"
+			],
+			[
+				"start",
+				"start_date_local"
+			],
+			[
+				"ride",
+				"ride_id"
+			],
+			[
+				"summ",
+				"summary_polyline"
+			],
+			[
+				"starva",
+				"strava_id"
+			],
+			[
+				"strto",
+				"strtotime"
+			],
+			[
+				"max",
+				"max_speed"
+			],
+			[
+				"stra",
+				"strava_id"
+			],
+			[
+				"client",
+				"client_secret"
+			],
+			[
+				"main",
+				"main_page"
+			],
+			[
+				"da",
+				"data"
+			],
+			[
+				"kategor",
+				"Kategorien"
+			],
+			[
+				"new",
+				"new_image"
+			],
+			[
+				"border",
+				"border-style"
+			],
+			[
+				"product",
+				"productTeaser"
+			],
+			[
+				"data",
+				"dataId"
+			],
+			[
+				"image",
+				"imageLoaded"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"cahe",
+				"cachetime"
+			],
+			[
+				"all",
+				"allLoaded"
+			],
+			[
+				"br",
+				"broadcast"
+			],
+			[
+				"imag",
+				"imageCount"
+			],
+			[
+				"im",
+				"imageSrc"
+			],
+			[
+				"e",
+				"element"
+			],
+			[
+				"de",
+				"debug"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"brands_",
+				"brands_in_cat"
+			],
+			[
+				"check",
+				"checkBookings"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"array_s",
+				"array_shift"
+			],
+			[
+				"show",
+				"showSlide"
+			],
+			[
+				"scha",
+				"schaltgruppen_komponente"
+			],
+			[
+				"preg_",
+				"preg_match"
+			],
+			[
+				"yout",
+				"youtube_id"
+			],
+			[
+				"fo",
+				"forEach"
+			],
+			[
+				"selle",
+				"sleepValue"
+			],
+			[
+				"twi",
+				"twitterUrl"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"tweet",
+				"tweetUrl"
+			],
+			[
+				"twe",
+				"tweetUrl"
+			],
+			[
+				"tw",
+				"tweetUrl"
+			],
+			[
+				"templ",
+				"template_name"
+			],
+			[
+				"preg",
+				"preg_replace"
+			],
+			[
+				"te",
+				"template_name"
+			],
+			[
+				"rese",
+				"resendData"
+			],
+			[
+				"tim",
+				"timestamp"
+			],
+			[
+				"face",
+				"facebookProvider"
+			],
+			[
+				"array_fi",
+				"array_filter"
+			],
+			[
+				"pa",
+				"pages2JSON"
+			],
+			[
+				"getB",
+				"getBlogs"
+			],
+			[
+				"ko",
+				"kontakt"
+			],
+			[
+				"crea",
+				"createCompany"
+			],
+			[
+				"book",
+				"bookedProducts"
+			],
+			[
+				"prit",
+				"print"
+			],
+			[
+				"menu",
+				"menuCtrl"
+			],
+			[
+				"brand",
+				"brand_id"
+			],
+			[
+				"bran",
+				"brand_id"
+			],
+			[
+				"st",
+				"status"
+			],
+			[
+				"json",
+				"json_decode"
+			],
+			[
+				"sta",
+				"stateParams"
+			],
+			[
+				"news",
+				"news_page"
+			],
+			[
+				"ui",
+				"uikit"
+			],
+			[
+				"pro",
+				"progress"
+			],
+			[
+				"stat",
+				"status"
+			],
+			[
+				"Pro",
+				"ProductPageValues"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"ed",
+				"editableThemes"
+			],
+			[
+				"is_boo",
+				"is_booked"
+			],
+			[
+				"cont",
+				"context"
+			],
+			[
+				"kunde",
+				"kundelist"
+			],
+			[
+				"ret",
+				"return"
+			],
+			[
+				"pages",
+				"pages2Json"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"mod",
+				"modifyInput"
+			],
+			[
+				"sidebar",
+				"sidebarData"
+			],
+			[
+				"sideba",
+				"sidebarData"
+			],
+			[
+				"iam",
+				"image"
+			],
+			[
+				"dis",
+				"displayImages"
+			],
+			[
+				"url",
+				"urlencode"
+			],
+			[
+				"pr",
+				"product"
+			],
+			[
+				"gett",
+				"gettype"
+			],
+			[
+				"delete",
+				"deleteMarke"
+			],
+			[
+				"get",
+				"getData"
+			],
+			[
+				"c",
+				"countMarken"
+			],
+			[
+				"kon",
+				"kontaktdaten_locked"
+			],
+			[
+				"in",
+				"in_array"
+			],
+			[
+				"base",
+				"base_url"
+			],
+			[
+				"root",
+				"rootScope"
+			],
+			[
+				"p",
+				"produkte"
+			],
+			[
+				"l",
+				"layout"
+			],
+			[
+				"template",
+				"templateUrl"
+			],
+			[
+				"roo",
+				"rootCtrl"
+			],
+			[
+				"tem",
+				"template"
+			],
+			[
+				"f",
+				"frontend_filter"
+			],
+			[
+				"d",
+				"debug"
+			],
+			[
+				"loa",
+				"loadData"
+			],
+			[
+				"templa",
+				"templateUrl"
+			],
+			[
+				"array_p",
+				"array_push"
+			],
+			[
+				"filter",
+				"filterId"
+			],
+			[
+				"uk",
+				"uk-nav"
+			],
+			[
+				"pe",
+				"pendingRequests"
+			],
+			[
+				"http",
+				"httpService"
+			],
+			[
+				"retu",
+				"return"
+			],
+			[
+				"UI",
+				"UIkit"
+			],
+			[
+				"cat",
+				"cat_selector"
+			],
+			[
+				"sub",
+				"sub_page"
+			],
+			[
+				"men",
+				"menuItems"
+			],
+			[
+				"fil",
+				"filterCtrl"
+			],
+			[
+				"return",
+				"returnArray"
+			],
+			[
+				"getP",
+				"getProductsArrayFilter"
+			],
+			[
+				"getPro",
+				"getProductsArray"
+			],
+			[
+				"getProducts",
+				"getProductsArray"
+			],
+			[
+				"Update",
+				"updatePage"
+			],
+			[
+				"item",
+				"item_count"
+			],
+			[
+				"se",
+				"serialize"
+			],
+			[
+				"products",
+				"productsArray"
+			],
+			[
+				"bra",
+				"brandSelector"
+			],
+			[
+				"array_k",
+				"array_key_exists"
+			],
+			[
+				"brands",
+				"brandList"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<!DOCTYPE html>\n<html ng-app=\"scudiClub\">\n<head>\n\n	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n	<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n	<meta name=\"description\" content=\"Die Scuderia Südstadt im Strava Club\" />\n	<meta name=\"keywords\" content=\"Scudi Scuderia Südstadt Strava Strava Club\" />\n	<meta name=\"language\" content=\"de\" />\n	<meta name=\"generator\" content=\"ProcessWire\" />  \n	<meta name=\"image\" content=\"{{image}}\">\n	<link rel=\"shortcut icon\" href=\"/favicon.ico\" />\n	<title>Scuderia Strava Club</title>\n	<base href=\"//<?=$config->httpHost;?>/\" />\n	<meta property=\"og:title\" content=\"\"/>\n	<meta property=\"og:description\" content=\"\"/>\n	<meta property=\"og:url\" content=\"\"/>\n	<meta property=\"og:type\" content=\"\"/>\n	<meta property=\"og:image\" content=\"\"/>\n	<meta property=\"og:site_name\" content=\"\"/>\n	<meta property=\"fb:admins\" content=\"1410691276\"/>\n	<link rel=\"icon\" type=\"image/png\" href=\"/favicon-196x196.png\" sizes=\"196x196\" />\n	<link rel=\"icon\" type=\"image/png\" href=\"/favicon-96x96.png\" sizes=\"96x96\" />\n	<link rel=\"icon\" type=\"image/png\" href=\"/favicon-32x32.png\" sizes=\"32x32\" />\n	<link rel=\"icon\" type=\"image/png\" href=\"/favicon-16x16.png\" sizes=\"16x16\" />\n	<link rel=\"icon\" type=\"image/png\" href=\"/favicon-128.png\" sizes=\"128x128\" />    \n	<link rel=\"stylesheet\" href=\"/vendor/uikit/css/uikit.almost-flat.min.css\" />\n	<link rel=\"stylesheet\" href=\"/vendor/uikit/css/components/progress.almost-flat.min.css\" />\n	<link rel=\"stylesheet\" href=\"<?=$config->urls->templates?>styles/style.css?v=3\" />\n	<script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js\"></script>\n	<script src=\"//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js\"></script>\n	<script src=\"https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.4.9/angular-locale_de-de.js\"></script>\n	<!--script src=\"//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.min.js\"></script-->\n	<script src=\"/vendor/uikit/js/uikit.min.js\"></script>\n	<script src=\"/vendor/angular-ui-router.min.js\"></script>\n	<script src=\"/app/config.js?v=02\"></script>\n	<script src=\"/app/controller.js?v=025\"></script>\n	<script src=\"/app/factory.js?v=02\"></script>\n	<script src=\"/app/directives.js?v=01\"></script>\n\n	<script>\n		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\n		ga('create', 'UA-52807640-3', 'auto');\n		ga('send', 'pageview');\n\n		\n	</script>\n\n\n</head>\n\n<body>\n	<div class=\"all\">\n\n		<div class=\"content-wrapper uk-grid uk-margin-large-top\" style=\"margin-left:-15px\">\n			<div class=\"uk-width-1-1\" ui-view=\"main\">\n				<div class=\"uk-container-center uk-width-3-4 uk-panel uk-panel-box uk-margin-top\">\n					<div class=\"uk-text-center\"><img src=\"/img/scudi.jpg\"></div>\n					<p id=\"status\" class=\"uk-text-muted\">Loading.</p>\n					<div class=\"uk-progress uk-progress-striped uk-active\">\n						<div id=\"progress\" class=\"uk-progress-bar\"></div>\n					</div>\n				</div>\n			</div>\n			\n		</div>\n\n		<div id=\"menu\" class=\"uk-offcanvas\" ui-view=\"offcanvas\"></div>\n\n\n	</div>\n\n\n\n\n",
+			"file": "site/templates/home.php",
+			"file_size": 3147,
+			"file_write_time": 131008677206949333,
+			"settings":
+			{
+				"buffer_size": 3272,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "site/templates/api.php",
+			"settings":
+			{
+				"buffer_size": 535,
+				"line_ending": "Unix",
+				"name": "<?php"
+			}
+		},
+		{
+			"file": "app/layout/login.html",
+			"settings":
+			{
+				"buffer_size": 426,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "site/modules/ScudiStrava.module",
+			"settings":
+			{
+				"buffer_size": 5960,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Services/deleteData.php",
+			"settings":
+			{
+				"buffer_size": 270,
+				"line_ending": "Unix",
+				"name": "<?php"
+			}
+		},
+		{
+			"file": "site/templates/token_exchange.php",
+			"settings":
+			{
+				"buffer_size": 2318,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/config.js",
+			"settings":
+			{
+				"buffer_size": 3458,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/layout/home.html",
+			"settings":
+			{
+				"buffer_size": 4402,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "site/templates/notices.php",
+			"settings":
+			{
+				"buffer_size": 303,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/directives.js",
+			"settings":
+			{
+				"buffer_size": 1207,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controller.js",
+			"settings":
+			{
+				"buffer_size": 3736,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/factory.js",
+			"settings":
+			{
+				"buffer_size": 3246,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "site/config.php",
+			"settings":
+			{
+				"buffer_size": 2125,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 182.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"packa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/thomas/www/scuderia",
+		"/home/thomas/www/scuderia/app",
+		"/home/thomas/www/scuderia/app/layout",
+		"/home/thomas/www/scuderia/site",
+		"/home/thomas/www/scuderia/site/modules",
+		"/home/thomas/www/scuderia/site/templates",
+		"/home/thomas/www/scuderia/site/templates/styles",
+		"/home/thomas/www/scuderia/wire",
+		"/home/thomas/www/scuderia/wire/core",
+		"/home/thomas/www/scuderia/wire/modules",
+		"/home/thomas/www/scuderia/wire/modules/Markup"
+	],
+	"file_history":
+	[
+		"/home/thomas/www/scuderia/wire/modules/Markup/MarkupCache.module",
+		"/home/thomas/www/scuderia/wire/core/CacheFile.php",
+		"/home/thomas/www/scuderia/site/modules/ScudiStrava.module",
+		"/home/thomas/www/scuderia/app/layout/scoreboard.html",
+		"/tmp/fz3temp-1/config.php",
+		"/home/thomas/www/scuderia/site/templates/styles/style.css",
+		"/home/thomas/www/scuderia/app/layout/list.html",
+		"/home/thomas/www/scuderia/index.php",
+		"/home/thomas/www/scuderia/app/home.html",
+		"/home/thomas/www/scuderia/app/layout/offcanvas.html",
+		"/home/thomas/www/scuderia/site/modules/Helloworld.module",
+		"/home/thomas/www/scuderia/.gitignore",
+		"/home/thomas/www/scuderia/site/templates/token_exchange,php",
+		"/home/thomas/www/proguide/client/app/news.controller.js",
+		"/home/thomas/www/proguide/site/modules/product.module",
+		"/home/thomas/www/proguide/site/templates/admin_includes/main.php",
+		"/home/thomas/www/proguide/site/templates/admin_buchung_add.php",
+		"/home/thomas/www/proguide/site/templates/admin_buchung_edit.php",
+		"/home/thomas/www/proguide/site/templates/admin_kunden_edit.php",
+		"/home/thomas/www/proguide/site/templates/produktdaten.php",
+		"/home/thomas/www/proguide/site/templates/login.php",
+		"/home/thomas/www/proguide/site/modules/ProductPageValues.module",
+		"/home/thomas/www/proguide/Services/upload.php",
+		"/tmp/fz3temp-1/product.module",
+		"/home/thomas/www/proguide/client/app/menu.controller.js",
+		"/home/thomas/www/proguide/client/app/layout/home.html",
+		"/home/thomas/www/proguide/client/app/layout/news.html",
+		"/home/thomas/www/proguide/client/app/config.js",
+		"/home/thomas/www/proguide/client/app/directives.js",
+		"/home/thomas/www/proguide/site/templates/styles/frontend.css",
+		"/home/thomas/www/proguide/site/modules/ProcessWireUpgrade/ProcessWireUpgrade.module",
+		"/home/thomas/www/proguide/client/app/factory.js",
+		"/home/thomas/www/proguide/Services/unbook.php",
+		"/home/thomas/www/proguide/backend/app/layout/kunde_buchungen.html",
+		"/home/thomas/www/proguide/site/templates/admin_index.php",
+		"/home/thomas/www/proguide/site/modules/ProductNews.module",
+		"/home/thomas/www/proguide/site/modules/ProductList.module",
+		"/home/thomas/www/proguide/site/templates/home.php",
+		"/home/thomas/www/proguide/Services/allImageSizes.php",
+		"/home/thomas/www/proguide/site/templates/crawlerpage.php",
+		"/home/thomas/www/proguide/Services/api_specs.php",
+		"/home/thomas/www/proguide/Services/template_export.php",
+		"/home/thomas/www/proguide/site/templates/basic-page.php",
+		"/home/thomas/www/proguide/backend/app/config.js",
+		"/home/thomas/www/proguide/client/app/layout/produkte.html",
+		"/home/thomas/www/proguide/vendor/angular.dcb-img-fallback.js",
+		"/home/thomas/www/proguide/.htaccess",
+		"/home/thomas/www/proguide/site/modules/ProductPageList.module",
+		"/home/thomas/.cache/.fr-YZ0eHD/readme.md",
+		"/home/thomas/Desktop/padloper/readme.md",
+		"/home/thomas/www/proguide/client/app/listing.controller.js",
+		"/home/thomas/www/proguide/client/app/home.controller.js",
+		"/home/thomas/www/proguide/Services/template_fix.php",
+		"/home/thomas/www/proguide/client/app/layout/offcanvas.html",
+		"/home/thomas/www/proguide/client/app/layout/breadcrumbs.html",
+		"/home/thomas/www/proguide/client/app/layout/detail.html",
+		"/home/thomas/www/proguide/client/app/detail.controller.js",
+		"/home/thomas/www/proguide/backend/app/controller.js",
+		"/home/thomas/www/proguide/site/modules/ProductPageSearch.module",
+		"/home/thomas/www/proguide/site/templates/admin_kunden.php",
+		"/home/thomas/www/proguide/vendor/uikit/components/lightbox.js",
+		"/home/thomas/www/proguide/site/templates/kunde_index.php",
+		"/home/thomas/www/proguide/site/templates/kunde_produkte_edit.php",
+		"/home/thomas/www/proguide/vendor/markdown.js",
+		"/home/thomas/www/proguide/site/templates/kontaktdata.php",
+		"/home/thomas/www/proguide/client/app/layout/listing.html",
+		"/home/thomas/www/proguide/vendor/angulike.js",
+		"/home/thomas/www/proguide/client/app/head.controller.js",
+		"/home/thomas/www/proguide/vendor/facebook.js",
+		"/home/thomas/www/proguide/Services/resend.php",
+		"/home/thomas/www/proguide/client/app/channel.html",
+		"/home/thomas/www/proguide/site/templates/sitemap.php",
+		"/home/thomas/www/rabbit/index.html",
+		"/home/thomas/www/proguide/site/modules/ProductPageBlog.module",
+		"/home/thomas/www/proguide/site/templates/api.php",
+		"/home/thomas/www/proguide/site/templates/styles/style.css",
+		"/home/thomas/www/proguide/backend/app/layout/kunde_daten.html",
+		"/home/thomas/www/proguide/backend/app/layout/kunde_produkte.html",
+		"/home/thomas/www/proguide/backend/app/layout/kunde_index.html",
+		"/home/thomas/www/proguide/site/templates/admin_includes/sidebar.php",
+		"/home/thomas/www/proguide/wire/templates-admin/styles/main.css",
+		"/home/thomas/www/proguide/site/templates/styles/edit.css",
+		"/home/thomas/www/proguide/backend/app/layout/kunde_marken.html",
+		"/home/thomas/www/proguide/site/modules/Helloworld.module",
+		"/home/thomas/www/proguide/client/app/filter.controller.js",
+		"/home/thomas/www/proguide/wire/core/TemplateFile.php",
+		"/home/thomas/www/proguide/wire/core/SessionCSRF.php",
+		"/home/thomas/www/proguide/client/app/main.js",
+		"/home/thomas/www/proguide/client/app/proguide.js",
+		"/home/thomas/www/proguide/vendor/require.min.js",
+		"/home/thomas/www/proguide/wire/modules/Inputfield/InputfieldPage/InputfieldPage.module",
+		"/home/thomas/www/proguide/wire/core/Inputfield.php",
+		"/home/thomas/www/proguide/wire/modules/Inputfield/InputfieldForm.module",
+		"/home/thomas/www/proguide/wire/modules/Inputfield/InputfieldCheckbox.module",
+		"/home/thomas/www/proguide/wire/modules/Process/ProcessTemplate/ProcessTemplate.module",
+		"/home/thomas/www/proguide/wire/core/WireData.php",
+		"/home/thomas/www/proguide/site/config.php",
+		"/home/thomas/www/proguide/client/app/layout/desktop-menu.html",
+		"/home/thomas/www/proguide/site/modules/FieldtypeTable/InputfieldTable.module",
+		"/home/thomas/www/proguide/backend/app/factory.js",
+		"/home/thomas/www/proguide/backend/app/directives.js",
+		"/home/thomas/www/proguide/site/templates/notices.inc",
+		"/home/thomas/www/proguide/site/modules/FieldtypeTable/FieldtypeTable.module",
+		"/home/thomas/www/proguide/site/templates/kunde_daten.php",
+		"/home/thomas/www/proguide/site/modules/FieldtypeTable/InputfieldTable.js",
+		"/home/thomas/www/proguide/client/app/layout/detail_modal.html",
+		"/home/thomas/www/proguide/site/templates/kunde_marken.php",
+		"/home/thomas/www/proguide/site/templates/kunde_produkte.php",
+		"/home/thomas/www/proguide/site/templates/kunde_buchungen.php",
+		"/home/thomas/www/proguide/site/templates/kunde_sidebar.php",
+		"/home/thomas/www/proguide/site/templates/client_includes/sidebar.php",
+		"/home/thomas/www/proguide/vendor/ng-sortable/ng-sortable.style.css",
+		"/home/thomas/www/proguide/vendor/ng-sortable/ng-sortable.css",
+		"/home/thomas/www/proguide/wire/modules/AdminTheme/AdminThemeReno/styles/main.css",
+		"/home/thomas/www/proguide/wire/modules/AdminTheme/AdminThemeReno/styles/_common.scss",
+		"/home/thomas/www/proguide/site/templates/kunde_home.php",
+		"/home/thomas/www/proguide/site/templates/styles/kunden_style.css",
+		"/home/thomas/www/proguide/vendor/xeditable.js",
+		"/home/thomas/www/proguide/site/templates/kunde_produkte_add.php",
+		"/home/thomas/www/proguide/.gitignore",
+		"/home/thomas/www/proguide/README.md",
+		"/home/thomas/www/proguide/site/templates/admin_buchung_item.php",
+		"/home/thomas/www/proguide/site/templates/admin_buchung.php",
+		"/home/thomas/www/proguide/site/templates/kunde_produkte_archiv.php",
+		"/home/thomas/www/proguide/site/templates/admin_kunden_add.php",
+		"/home/thomas/www/proguide/site/templates/kunde_product_edit.php",
+		"/home/thomas/www/proguide/site/templates/distro_item.inc",
+		"/home/thomas/www/proguide/site/templates/kunde_daten_edit.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 102.0,
+		"where_history":
+		[
+			"/home/thomas/www/scuderia/",
+			"/home/thomas/www/proguide/",
+			"/home/thomas/www/proguide/site",
+			"/home/thomas/www/proguide/SITE/",
+			"/home/thomas/www/proguide/wire/",
+			"/home/thomas/www/proguide/",
+			"/home/thomas/www/proguide/wire/modules",
+			"/home/thomas/www/proguide/wire/core",
+			"/home/thomas/www/proguide",
+			"/home/thomas/www/proguide/wire/",
+			"/home/thomas/www/productspecial13/site/templates",
+			"",
+			"/home/thomas/www/admin/wire",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"simple",
+			");\n",
+			"lastgood",
+			"globalExpireTime",
+			"100px",
+			"rides",
+			"menuCtrl",
+			"user",
+			"print",
+			"echo",
+			"error",
+			"Änderungen gespeichert.",
+			"errr.",
+			"Änderungen gespeichert",
+			"Du verwe",
+			"rootScope",
+			"http",
+			"disab",
+			"inputfieldoption",
+			"setImageOrder",
+			"upper",
+			"search",
+			"getproduct",
+			"cache",
+			"imagesize",
+			"images",
+			"upda",
+			"}\n",
+			"getBuchungen",
+			"border-t",
+			"shad",
+			"newPr",
+			"focus",
+			"addMarke",
+			"newProduct",
+			"slider",
+			"}\n",
+			"editpro",
+			"newp",
+			"setHeaderValue",
+			"absur",
+			"fbLike",
+			"facebook",
+			"changeValue",
+			"$this->konfig",
+			"konfig",
+			"./Rabbit-BMX ... Dein One-Stop-Shoppe für den gesamten BMX Bedarf!_files",
+			"https://web.archive.org/web/20090904021459/",
+			"createCompany",
+			"mail",
+			"daten",
+			"notes",
+			"checkboxes",
+			"fieldtypecheckbox",
+			"inputfieldstatecollapsed",
+			"inputfieldcollapsed",
+			"collapsed1",
+			"inputfieldbutton",
+			"produkte",
+			"search",
+			"data-uk-grid-match",
+			"gridMatchHeight",
+			"uk-grid-match",
+			"$rootScope.basis.brand",
+			"use",
+			"data",
+			"input",
+			"buildForm",
+			"$this->form",
+			"processinput",
+			"->of(",
+			"getpr",
+			"array",
+			"of(1",
+			"editP",
+			"editPro",
+			"getSelectablePages",
+			"___getSelectablePages",
+			"getFindPagesSelector",
+			"$product",
+			"findPagesSelector",
+			"findPagesCode",
+			"checkedVa",
+			"set(",
+			"set",
+			"error",
+			"setattribute",
+			"getAttributesString",
+			"setattribute",
+			"setAttribute",
+			"setAttributes",
+			"attr(",
+			"is already in use",
+			"already",
+			"The name  is already in use",
+			"notify",
+			"/produkte",
+			"/produkte/",
+			"processInput",
+			"preventSaving",
+			"toggle-icon",
+			"updateAttribute",
+			"template",
+			".msg",
+			"return->msg",
+			"msg",
+			"d.data",
+			"getMenu",
+			"$return",
+			"return",
+			"notif",
+			"},\n",
+			"is_booked",
+			"get_a",
+			"cache",
+			"CSRF->renderInput(",
+			"Session CSRF",
+			"SessionCSRF",
+			"getOptionAttributes",
+			"$state",
+			"produkte",
+			"field",
+			"sub",
+			"input",
+			"page",
+			"getmenu",
+			"distro",
+			"buchung"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$this->conf",
+			"/assets",
+			"$page",
+			".text",
+			"return->text",
+			"d",
+			"$this->return",
+			"images",
+			"player",
+			"bigair.tv"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "site/templates/home.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3272,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2234,
+								2234
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "site/templates/api.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 535,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								345,
+								345
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/layout/login.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 426,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								323,
+								323
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "site/modules/ScudiStrava.module",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5960,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4015,
+								4015
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2160.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Services/deleteData.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 270,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								145,
+								145
+							]
+						],
+						"settings":
+						{
+							"auto_name": "<?php",
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "site/templates/token_exchange.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2318,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2076,
+								2076
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 468.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3458,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								68
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/layout/home.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4402,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2240,
+								2240
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 378.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "site/templates/notices.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 303,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								303,
+								303
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/directives.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1207,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								381,
+								381
+							]
+						],
+						"settings":
+						{
+							"rulers":
+							[
+								120
+							],
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/controller.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3736,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2887,
+								2887
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1026.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "app/factory.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3246,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2294,
+								2294
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 702.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "site/config.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2125,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2106,
+								2106
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 756.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "scuderia.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"productv",
+				"site/modules/ProductPageValues.module"
+			],
+			[
+				"produc",
+				"site/modules/ProductList.module"
+			],
+			[
+				"basi",
+				"site/templates/basic-page.php"
+			],
+			[
+				"confi",
+				"backend/app/config.js"
+			],
+			[
+				"dire",
+				"client/app/directives.js"
+			],
+			[
+				"news",
+				"client/app/layout/news.html"
+			],
+			[
+				"home",
+				"client/app/layout/home.html"
+			],
+			[
+				"crawl",
+				"site/templates/crawlerpage.php"
+			],
+			[
+				"fro",
+				"site/templates/styles/frontend.css"
+			],
+			[
+				"deta",
+				"client/app/layout/detail.html"
+			],
+			[
+				"front",
+				"site/templates/styles/frontend.css"
+			],
+			[
+				"direct",
+				"client/app/directives.js"
+			],
+			[
+				"list",
+				"client/app/listing.controller.js"
+			],
+			[
+				"fron",
+				"site/templates/styles/frontend.css"
+			],
+			[
+				"pro",
+				"site/modules/ProductList.module"
+			],
+			[
+				"productn",
+				"site/modules/ProductNews.module"
+			],
+			[
+				"factor",
+				"client/app/factory.js"
+			],
+			[
+				"detai",
+				"client/app/layout/detail.html"
+			],
+			[
+				"direc",
+				"client/app/directives.js"
+			],
+			[
+				"ho",
+				"client/app/home.controller.js"
+			],
+			[
+				"config",
+				"backend/app/config.js"
+			],
+			[
+				"produ",
+				"client/app/layout/produkte.html"
+			],
+			[
+				"menu",
+				"client/app/menu.controller.js"
+			],
+			[
+				"contro",
+				"backend/app/controller.js"
+			],
+			[
+				"productli",
+				"site/modules/ProductList.module"
+			],
+			[
+				"processpageed",
+				"wire/modules/Process/ProcessPageEdit/ProcessPageEdit.module"
+			],
+			[
+				"inputfieldpage",
+				"wire/modules/Inputfield/InputfieldPage/InputfieldPage.module"
+			],
+			[
+				"sty",
+				"bigair2/site/templates/styles/style.css"
+			],
+			[
+				"style",
+				"bigair2/site/templates/styles/style.css"
+			],
+			[
+				"page.php",
+				"wire/core/Page.php"
+			],
+			[
+				"profi",
+				"bigair2/site/templates/profile.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/www/bigair2/index.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 316.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
