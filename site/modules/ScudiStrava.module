@@ -62,23 +62,25 @@ class ScudiStrava extends WireData implements Module {
 
 	public function importUserRides() {
 		if(!$this->access_token) return false;
-		if(!$this->user->last_login) $since = "1451602800";
-		else $since = $this->user->last_login;
-		$url = 'https://www.strava.com/api/v3/athlete/activities?after='.$since.'&per_page=200';
-		$auth = "authorization: Bearer ".$this->access_token;
-		$ch = curl_init();
-		curl_setopt($ch,CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_HTTPHEADER, array($auth));
-		curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
-		$result = curl_exec($ch);
-		curl_close($ch);
-		$data = json_decode($result);
-		foreach($data as $ride) {
-			$this->addRide($ride);
+		if(!$this->user->last_login) {
+			$since = "1451602800";
+			$url = 'https://www.strava.com/api/v3/athlete/activities?after='.$since.'&per_page=200';
+			$auth = "authorization: Bearer ".$this->access_token;
+			$ch = curl_init();
+			curl_setopt($ch,CURLOPT_URL, $url);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, array($auth));
+			curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+			$result = curl_exec($ch);
+			curl_close($ch);
+			$data = json_decode($result);
+			foreach($data as $ride) {
+				$this->addRide($ride);
+			}
+			$this->user->last_login=time();
+			$this->user->save();
+			return $data;
 		}
-		$this->user->last_login=time();
-		$this->user->save();
-		return $data;
+		else return 1;
 	}
 
 	public function logout() {
@@ -93,6 +95,7 @@ class ScudiStrava extends WireData implements Module {
 		$selector = array();
 		$selector[] = "template=ride";
 		$selector[] = "type=Ride";
+		$selector[] = "start_date_local>2/1/2016";
 		/*
 		if($start_date) $selector[] = "start_date_local>".$start_date;
 		if($end_date) $selector[] = "start_date_local<".$end_date;
@@ -141,7 +144,7 @@ class ScudiStrava extends WireData implements Module {
 	}
 
 	
-	public function getDude($id=NULL) {
+	public function getDude() {
 		if(!$this->access_token) return false;
 		if(!$this->input->get->id) $id = $this->strava_id;
 		else $id = $this->input->get->id;
@@ -151,13 +154,29 @@ class ScudiStrava extends WireData implements Module {
 		
 		if(!$dude->id) {
 			$data = $this->getUserDataFromStrava($id);
+			$data = json_decode($data);
 			$dude = new User;
 			$dude->of(false);
-			$dude->name = $data->username;
-			if(!$data->username) $dude->name = "strava".$id;
+
+			if(!isset($data->username)) $name = "strava".$id;
+			else $name = $data->username;
+
+			$i = 0;
+			do {
+				$new_name = $name . ($i ? "-$i" : '');
+				$u = $this->users->get("name=$new_name"); 
+				$i++;
+			} while($u->id); 
+			$dude->name = $new_name;
+
 			$dude->addRole("strava");
 			$dude->strava_id = $data->id;
+			$dude->firstname = $data->firstname;
+			$dude->lastname = $data->lastname;
 			$dude->save();
+			if($data->profile!='avatar/athlete/large.png') $dude->avatar = $data->profile;
+			$dude->save('avatar');
+			$dude->of(true);
 		}
 		else {
 			$cache = $this->modules->get('MarkupCache');

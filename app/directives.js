@@ -41,4 +41,30 @@
 	}]);
 
 
+  app.directive("pagination",pagination);
+  function pagination($rootScope,$timeout) {
+    return {
+      scope: {},
+      restrict: 'AE',
+      link: function(scope,ele,attrs) {
+      	var pagination = UI.pagination(ele,eval('('+attrs.pagination+')'));
+      	
+      	ele.on('select.uk.pagination', function(e, pageIndex){
+      		$rootScope.$broadcast('page',pageIndex+1);
+    		//alert('You have selected page: ' + (pageIndex+1));
+		});
+		$rootScope.$on('updatePager',function(){
+
+			$timeout(function(){ 
+				var options = eval('('+attrs.pagination+')');
+				pagination.options.items = options.items;
+				pagination.options.itemsOnPage = options.itemsOnPage;
+				pagination.currentPage = 1;
+				pagination.init();
+			},10); 
+		})
+      }
+    }
+  }
+
 })(jQuery,jQuery.UIkit);

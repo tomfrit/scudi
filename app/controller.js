@@ -26,27 +26,37 @@
 		var thisWeek = $filter('date')(now,'w');
 		//var thisWeek = new Date().getWeek();
 		var timerange = getWeekly(thisWeek);
+		
+		var page = 1;
+		$scope.itemsPerPage = 10;
 		$scope.currentWeek = thisWeek;
 		$scope.week = thisWeek;
 		$scope.ordnung='-distance';
 		$scope.ordnungText = "Distanz";
 
-
-		populateScoreboard(timerange);
+		$rootScope.$on('page',function(event,args) {
+			UI.Utils.scrollToElement($('#rides'));
+			populateScoreboard(timerange,args);
+			$scope.$apply();
+		})
+		populateScoreboard(timerange,page);
 
 		$scope.weekly = function(week) {
 			if(!week) week = thisWeek;
 			timerange = getWeekly(week);
 			$scope.sb='week';
 			$scope.week=week;
-			populateScoreboard(timerange);
+			populateScoreboard(timerange,page);
+			$rootScope.$broadcast('updatePager');
 		}
 
 		$scope.thisMonth = function() {
 			timerange = {'start':getFirstOfMonth(),'end':now}
 			$scope.sb='month';
 			$scope.week = 0;
-			populateScoreboard(timerange);
+			populateScoreboard(timerange,page);
+			$rootScope.$broadcast('updatePager');
+
 		}
 
 		$scope.order=function(ordnung,ordnungText) {
@@ -54,7 +64,7 @@
 			$scope.ordnungText = ordnungText;
 		}
 
-		function populateScoreboard(timerange) {
+		function populateScoreboard(timerange,page) {
 			var score = {};
 			var rides = [];
 			$scope.score = [];
@@ -81,7 +91,14 @@
 					}
 					rides.push(ride);
 				}
+
 			});
+
+    		rides.sort(function (a, b) {
+      			return (a.start_date_local < b.start_date_local ? 1 : -1);
+    		});
+
+
 			angular.forEach(score,function(val,key) {
 				var sb = {};
 				sb.athlete = key;
@@ -89,7 +106,12 @@
 				sb.average_speed = val.average_speed / val.moving;
 				$scope.score.push(sb);
 			});
-			$scope.rides = rides;
+			$scope.itemCount = rides.length;
+			var start = (page-1)*$scope.itemsPerPage;
+			var shown = rides.slice(start,start+$scope.itemsPerPage);
+			$scope.rides = shown;
+
+
 		}
 
 
@@ -105,9 +127,7 @@
         	var ISOweekEnd = new Date(ISOweekStart);
         	//ISOweekEnd.setHours(0,0,0,0);
         	ISOweekEnd.setDate(ISOweekEnd.getDate() + 7);
-        	console.debug(ISOweekStart);
-        	console.debug(ISOweekEnd);
-			return {start:ISOweekStart,end:ISOweekEnd};
+        	return {start:ISOweekStart,end:ISOweekEnd};
 
 		}
 

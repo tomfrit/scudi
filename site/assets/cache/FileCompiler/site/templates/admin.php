@@ -12,4 +12,4 @@
  * 
  */
 
-require($config->paths->adminTemplates . 'controller.php'); 
+require(\ProcessWire\wire('files')->compile($config->paths->adminTemplates . 'controller.php',array('includes'=>true,'namespace'=>true,'modules'=>true))); 
