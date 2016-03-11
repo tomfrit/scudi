@@ -2,10 +2,11 @@
 	var app = angular.module('scudiClub',['ui.router']);
   
   app.config(config);
-  config.$inject = ['$stateProvider','$urlRouterProvider','$locationProvider'];
+  config.$inject = ['$stateProvider','$urlRouterProvider','$locationProvider','$urlMatcherFactoryProvider'];
 
-  function config($stateProvider, $urlRouterProvider,$locationProvider) {
+  function config($stateProvider, $urlRouterProvider,$locationProvider,$urlMatcherFactoryProvider) {
     $locationProvider.html5Mode({enabled:true});
+    $urlRouterProvider.otherwise('/');
     //$urlRouterProvider.otherwise('/');
     //$urlMatcherFactoryProvider.strictMode(false);
     $stateProvider
@@ -32,7 +33,7 @@
     })
     .state('home',{
       parent:'root',
-      url:'/',
+      url:"/{dummyParam:[a-zA-Z0-9\_\=]?}",
       templateUrl:'/app/layout/home.html',
       controller:'homeCtrl',
       resolve : {

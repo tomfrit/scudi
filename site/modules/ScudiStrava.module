@@ -41,7 +41,7 @@ class ScudiStrava extends WireData implements Module {
 	public function importRides() {
 		if(!$this->access_token) return false;
 		$cache = $this->modules->get("MarkupCache");
-		if(!$data=$cache->get("stravaClubData",3600)) {
+		if(!$data=$cache->get("stravaClubData",360)) {
 			$url = 'https://www.strava.com/api/v3/clubs/34092/activities?per_page=200';
 			$auth = "authorization: Bearer ".$this->access_token;
 			$ch = curl_init();
@@ -95,7 +95,7 @@ class ScudiStrava extends WireData implements Module {
 		$selector = array();
 		$selector[] = "template=ride";
 		$selector[] = "type=Ride";
-		$selector[] = "start_date_local>2/1/2016";
+		$selector[] = "start_date>2/1/2016";
 		/*
 		if($start_date) $selector[] = "start_date_local>".$start_date;
 		if($end_date) $selector[] = "start_date_local<".$end_date;
@@ -126,7 +126,7 @@ class ScudiStrava extends WireData implements Module {
 		}
 		$r->of(false);
 		$r->title = $ride->name;
-		$fields = array('average_cadence','average_heartrate','average_temp','average_watts','calories','device_watts','athlete_count','distance','elapsed_time','gear_id','kilojoules','max_heartrate','moving_time','suffer_score','total_elevation_gain','type');
+		$fields = array('average_cadence','average_heartrate','average_temp','average_watts','calories','device_watts','athlete_count','distance','elapsed_time','gear_id','kilojoules','max_heartrate','moving_time','suffer_score','total_elevation_gain','type','start_date','timezone','trainer','commute');
 		foreach($fields as $fi) {
 			if(isset($ride->$fi)) $r->set($fi,$ride->$fi);
 		}
@@ -218,7 +218,7 @@ class ScudiStrava extends WireData implements Module {
 
 	private function page2Class(Page $page) {
 		$ret = new \StdClass();
-		$fields = array('title','athlete','average_cadence','average_heartrate','average_temp','average_watts','calories','device_watts','athlete_count','distance','elapsed_time','gear_id','kilojoules','max_heartrate','moving_time','suffer_score','total_elevation_gain','type','map','start_date_local','average_speed','ride_id');
+		$fields = array('title','athlete','average_cadence','average_heartrate','average_temp','average_watts','calories','device_watts','athlete_count','distance','elapsed_time','gear_id','kilojoules','max_heartrate','moving_time','suffer_score','total_elevation_gain','type','map','start_date','timezone','start_date_local','average_speed','ride_id','trainer','commute');
 		$ret->id = $page->id;
 
 		foreach($fields as $fi) {

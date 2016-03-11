@@ -51,7 +51,7 @@
 		}
 
 		$scope.thisMonth = function() {
-			timerange = {'start':getFirstOfMonth(),'end':now}
+			timerange = getMonthly();
 			$scope.sb='month';
 			$scope.week = 0;
 			populateScoreboard(timerange,page);
@@ -65,12 +65,13 @@
 		}
 
 		function populateScoreboard(timerange,page) {
+			//console.debug(timerange);
 			var score = {};
 			var rides = [];
 			$scope.score = [];
 			angular.forEach($scope.$root.rides,function(ride){
 
-				if(timerange.start<(ride.start_date_local*1000) && (ride.start_date_local*1000)<timerange.end) {
+				if(timerange.start<(ride.start_date*1000) && (ride.start_date*1000)<timerange.end) {
 					if(score[ride.athlete]) {
 						if(ride.distance>score[ride.athlete].max_distance) score[ride.athlete].max_distance = ride.distance;
 						score[ride.athlete].distance = score[ride.athlete].distance + ride.distance;
@@ -95,7 +96,7 @@
 			});
 
     		rides.sort(function (a, b) {
-      			return (a.start_date_local < b.start_date_local ? 1 : -1);
+      			return (a.start_date < b.start_date ? 1 : -1);
     		});
 
 
@@ -131,10 +132,12 @@
 
 		}
 
-		function getFirstOfMonth() {
+		function getMonthly() {
 			var date = new Date();
 			var firstDay = new Date(date.getFullYear(), date.getMonth(), 1);
-			return firstDay.getTime();
+			var lastDay = new Date(date.getFullYear(), date.getMonth(), 1);
+			lastDay.setMonth(date.getMonth()+1);
+			return {start:firstDay,end:lastDay};
 		}
 
 
