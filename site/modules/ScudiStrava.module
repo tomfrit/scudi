@@ -24,7 +24,7 @@ class ScudiStrava extends WireData implements Module {
 	}
 
 	public function init() {
-
+		$this->addHook('LazyCron::everyDay', $this, 'updateRides'); 
 	}
 
 	public function setAccessToken($token) {
@@ -38,10 +38,28 @@ class ScudiStrava extends WireData implements Module {
 	public function setStravaId($id) {
 		$this->strava_id = $id;
 	}
+
+	
+
 	public function importRides() {
+		$data = $this->getStravaClubData();
+		foreach($data as $ride) {
+			$this->addRide($ride);
+		}
+	}
+
+	public function updateRides() {
+		$data = $this->getStravaClubData();
+		foreach($data as $ride) {
+			$this->updateRide($ride);
+		}
+		return count($data)." Touren aktualisiert.";
+	}
+
+	private function getStravaClubData() {
 		if(!$this->access_token) return false;
 		$cache = $this->modules->get("MarkupCache");
-		if(!$data=$cache->get("stravaClubData",360)) {
+		if(!$data=$cache->get("stravaClubData",3600)) {
 			$url = 'https://www.strava.com/api/v3/clubs/34092/activities?per_page=200';
 			$auth = "authorization: Bearer ".$this->access_token;
 			$ch = curl_init();
@@ -51,9 +69,6 @@ class ScudiStrava extends WireData implements Module {
 			$result = curl_exec($ch);
 			curl_close($ch);
 			$data = json_decode($result);
-			foreach($data as $ride) {
-				$this->addRide($ride);
-			}
 			$cache->save($result);
 		}
 		else $data = json_decode($data);
@@ -123,10 +138,19 @@ class ScudiStrava extends WireData implements Module {
 			$r->ride_id = $ride->id;
 			$r->athlete = $ride->athlete->id;
 			$r->start_date_local = strtotime($ride->start_date_local);
+			$r->start_date = strtotime($ride->start_date);
+			$r->save();
+			$r = $this->updateRide($ride,$r);
 		}
+		return $r;
+	}
+
+	private function updateRide(\StdClass $ride,Page $r=null) {
+		if(!$r) $r=$this->pages->get('ride_id='.$ride->id);
+		if(!$r->id) return $this->addRide($ride);
 		$r->of(false);
 		$r->title = $ride->name;
-		$fields = array('average_cadence','average_heartrate','average_temp','average_watts','calories','device_watts','athlete_count','distance','elapsed_time','gear_id','kilojoules','max_heartrate','moving_time','suffer_score','total_elevation_gain','type','start_date','timezone','trainer','commute');
+		$fields = array('average_cadence','average_heartrate','average_temp','average_watts','calories','device_watts','athlete_count','distance','elapsed_time','gear_id','kilojoules','max_heartrate','moving_time','suffer_score','total_elevation_gain','type','timezone','trainer','commute');
 		foreach($fields as $fi) {
 			if(isset($ride->$fi)) $r->set($fi,$ride->$fi);
 		}
@@ -140,6 +164,7 @@ class ScudiStrava extends WireData implements Module {
 			$r->save();
 		}
 		$r->of(true);
+		
 		return $r;
 	}
 

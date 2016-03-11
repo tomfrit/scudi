@@ -97,3 +97,5 @@
 2016-03-11 10:54:14	tomfrit	http://scu.enizehates.de/admin/login/logout/	Logout for 'tomfrit'
 2016-03-11 10:54:19	thomas	http://scu.enizehates.de/admin/login/	Successful login for 'thomas'
 2016-03-11 11:16:35	tomfrit	http://scu.enizehates.de/token_exchange/?state=&code=bd9878ba067705aca206456f6e173b10b00b5970	Successful login for 'tomfrit'
+2016-03-11 12:00:56	tomfrit	http://scu.enizehates.de/token_exchange/?state=&code=628a29fbe648a9d2d0e9ee87b0e2512db299ad15	Successful login for 'tomfrit'
+2016-03-11 12:13:33	thomas	http://scu.enizehates.de/admin/login/	Successful login for 'thomas'

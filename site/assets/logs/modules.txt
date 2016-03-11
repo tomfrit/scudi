@@ -45,3 +45,6 @@
 2016-02-25 12:18:27	thomas	http://scu.enizehates.de/admin/module/edit?name=MarkupCache	Saved module 'MarkupCache' config data
 2016-02-29 21:34:25	tomfrit	http://scu.enizehates.de/api/dude/	Installed module 'MarkupCache'
 2016-02-29 21:34:26	tomfrit	http://scu.enizehates.de/api/dude/	Saved module info caches
+2016-03-11 12:17:28	thomas	http://scu.enizehates.de/admin/module/	Installed module 'LazyCron'
+2016-03-11 12:17:28	thomas	http://scu.enizehates.de/admin/module/	Saved module info caches
+2016-03-11 12:17:33	thomas	http://scu.enizehates.de/admin/module/edit?name=LazyCron	Saved module 'LazyCron' config data
