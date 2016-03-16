@@ -9,6 +9,9 @@
 	<meta name="language" content="de" />
 	<meta name="generator" content="ProcessWire" />  
 	<meta name="image" content="{{image}}">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="manifest" href="manifest.json">
 	<link rel="shortcut icon" href="/favicon.ico" />
 	<title>Scuderia Strava Club</title>
 	<base href="//<?=$config->httpHost;?>/" />
@@ -36,10 +39,10 @@
 	<script src="/vendor/uikit/js/uikit.min.js"></script>
 	<script src="/vendor/uikit/js/components/pagination.min.js"></script>
 	<script src="/vendor/angular-ui-router.min.js"></script>
-	<script src="/app/config.js?v=03"></script>
-	<script src="/app/controller.js?v=026"></script>
+	<script src="/app/config.js?v=04"></script>
+	<script src="/app/controller.js?v=027"></script>
 	<script src="/app/factory.js?v=02"></script>
-	<script src="/app/directives.js?v=01"></script>
+	<script src="/app/directives.js?v=02"></script>
 
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

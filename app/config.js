@@ -34,7 +34,7 @@
     .state('home',{
       parent:'root',
       url:"/{dummyParam:[a-zA-Z0-9\_\=]?}",
-      templateUrl:'/app/layout/home.html',
+      templateUrl:'/app/layout/home.html?2323',
       controller:'homeCtrl',
       resolve : {
         dude:['loader',function(loader) {

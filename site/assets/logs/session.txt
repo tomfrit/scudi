@@ -102,3 +102,6 @@
 2016-03-14 15:57:08	?	?	User 'tomfrit' - Session timed out (session older than 86400 seconds) (IP: 127.0.0.1)
 2016-03-14 15:57:14	tomfrit	http://scu.enizehates.de/token_exchange/?state=&code=1d3eadfc7d3f369fa27b4493c305a6aa93a3c3d8	Successful login for 'tomfrit'
 2016-03-14 15:57:38	tomfrit	http://scu.enizehates.de/token_exchange/?state=&code=500b73a07ed128b840ed11d15ccc6ed44ff59cf1	Successful login for 'tomfrit'
+2016-03-16 11:55:13	thomas	http://scu.enizehates.de/admin/login/	Successful login for 'thomas'
+2016-03-16 12:21:39	?	?	User 'tomfrit' - Error: Session fingerprint changed (IP address or useragent) (IP: 127.0.0.1)
+2016-03-16 12:21:44	tomfrit	http://scu.enizehates.de/token_exchange/?state=&code=ff41d21c7d87ce6003b39430e3581f1164e9b741	Successful login for 'tomfrit'
