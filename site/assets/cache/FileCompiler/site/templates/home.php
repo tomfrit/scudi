@@ -29,13 +29,15 @@
 	<link rel="stylesheet" href="<?=$config->urls->templates?>styles/style.css?v=3" />
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.4.9/angular-locale_de-de.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.4.9/angular-locale_de-de.js"></script>
+	<script src="/vendor/moment-with-locales.min.js"></script>
+	<script src="/vendor/angular-moment.min.js"></script>
 	<!--script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.min.js"></script-->
 	<script src="/vendor/uikit/js/uikit.min.js"></script>
 	<script src="/vendor/uikit/js/components/pagination.min.js"></script>
 	<script src="/vendor/angular-ui-router.min.js"></script>
-	<script src="/app/config.js?v=02"></script>
-	<script src="/app/controller.js?v=025"></script>
+	<script src="/app/config.js?v=03"></script>
+	<script src="/app/controller.js?v=026"></script>
 	<script src="/app/factory.js?v=02"></script>
 	<script src="/app/directives.js?v=01"></script>
 

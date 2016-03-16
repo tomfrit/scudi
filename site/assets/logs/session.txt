@@ -99,3 +99,6 @@
 2016-03-11 11:16:35	tomfrit	http://scu.enizehates.de/token_exchange/?state=&code=bd9878ba067705aca206456f6e173b10b00b5970	Successful login for 'tomfrit'
 2016-03-11 12:00:56	tomfrit	http://scu.enizehates.de/token_exchange/?state=&code=628a29fbe648a9d2d0e9ee87b0e2512db299ad15	Successful login for 'tomfrit'
 2016-03-11 12:13:33	thomas	http://scu.enizehates.de/admin/login/	Successful login for 'thomas'
+2016-03-14 15:57:08	?	?	User 'tomfrit' - Session timed out (session older than 86400 seconds) (IP: 127.0.0.1)
+2016-03-14 15:57:14	tomfrit	http://scu.enizehates.de/token_exchange/?state=&code=1d3eadfc7d3f369fa27b4493c305a6aa93a3c3d8	Successful login for 'tomfrit'
+2016-03-14 15:57:38	tomfrit	http://scu.enizehates.de/token_exchange/?state=&code=500b73a07ed128b840ed11d15ccc6ed44ff59cf1	Successful login for 'tomfrit'

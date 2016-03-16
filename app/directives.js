@@ -40,6 +40,29 @@
     	};
 	}]);
 
+	app.filter('groupBy', function(){
+    	return function(items,group){       
+       		return items.filter(function(element, index, array) {
+        		return parseInt(element.day)==group;
+       		});        
+    	}        
+ 	}); 
+
+	app.directive('dayFromString',function(moment) {
+		return {
+			scope: {},
+			restrict:'AE',
+			template:'{{tag}}',
+			link: function(scope,ele,attrs) {
+				console.log(attrs.dayFromString);
+				var year = parseInt(attrs.dayFromString.substring(0,4));
+				var month = parseInt(attrs.dayFromString.substring(5,2));
+				var day = parseInt(attrs.dayFromString.substring(7,2));
+				scope.tag=moment(attrs.dayFromString,'YYYYMMDD').format('dddd, DD. MMMM YYYY');
+			}
+		}
+	});
+
 
   app.directive("pagination",pagination);
   function pagination($rootScope,$timeout) {

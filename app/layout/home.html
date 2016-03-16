@@ -43,7 +43,9 @@
 				</table>
 			</div>
 			<a id="rides"></a>
-			<div class="uk-width-1-1 uk-panel uk-panel-box uk-margin-bottom" ng-repeat="item in rides">
+			<div ng-repeat="group in getGroups()">
+			<p class="uk-text-primary uk-text-bold" day-from-string="{{group}}"></p>
+			<div class="uk-width-1-1 uk-panel uk-panel-box uk-margin-bottom" ng-repeat="item in rides | groupBy:group">
 				<div class="uk-grid uk-grid-small">
 					<div class="uk-width-1-1 uk-width-medium-1-2 uk-grid">
 						<div class="uk-width-1-4">
@@ -52,7 +54,7 @@
 							</athlete>
 						</div>
 						<div class="uk-width-3-4">
-							<p class="uk-text-small uk-text-muted">{{(item.start_date*1000) | date:'dd.MM.yyyy HH:mm' : item.timezone}}</p>
+							<p class="uk-text-small uk-text-muted">{{(item.start_date*1000) | date:'HH:mm' : item.timezone}} Uhr</p>
 							<a href="//strava.com/activities/{{item.ride_id}}" class="uk-text-bold" target="_blank">{{item.title}}</a></p>
 							<p athlete strava-id="{{item.athlete}}">{{rider.firstname}} {{rider.lastname}}</p>
 							<p class="uk-text-muted uk-text-small">
@@ -66,6 +68,7 @@
 					</div>
 				</div>
 
+			</div>
 			</div>
 			<ul class="uk-pagination" pagination="{items:{{itemCount}}, itemsOnPage:{{itemsPerPage}}}"></ul>
 

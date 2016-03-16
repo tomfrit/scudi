@@ -19,14 +19,16 @@
 	}
 
 	app.controller("scoreboard",scoreboard);
-	scoreboard.$inject=['$rootScope','$scope','$filter'];
-	function scoreboard($rootScope,$scope,$filter) {
+	scoreboard.$inject=['$rootScope','$scope','$filter','moment'];
+	function scoreboard($rootScope,$scope,$filter,moment) {
+		//new Date(todayDate.getFullYear(), todayDate.getMonth(), todayDate.getDate()), 'w', 'CET')
 
 		var now = new Date().getTime();
-		var thisWeek = $filter('date')(now,'w');
+		//console.debug(now);
+		var thisWeek = moment(now).week();
 		//var thisWeek = new Date().getWeek();
 		var timerange = getWeekly(thisWeek);
-		
+		//console.log(timerange);
 		var page = 1;
 		$scope.itemsPerPage = 10;
 		$scope.currentWeek = thisWeek;
@@ -64,6 +66,17 @@
 			$scope.ordnungText = ordnungText;
 		}
 
+		$scope.getGroups = function () {
+    		var groupArray = [];
+    		angular.forEach($scope.rides, function (item, idx) {
+        		if (groupArray.indexOf(parseInt(item.day)) == -1) {
+            		groupArray.push(parseInt(item.day));
+        		}
+    		});
+    		return groupArray.sort().reverse();
+		};
+
+
 		function populateScoreboard(timerange,page) {
 			//console.debug(timerange);
 			var score = {};
@@ -72,6 +85,7 @@
 			angular.forEach($scope.$root.rides,function(ride){
 
 				if(timerange.start<(ride.start_date*1000) && (ride.start_date*1000)<timerange.end) {
+					ride.day = moment(ride.start_date*1000).format("YYYYMMDD");
 					if(score[ride.athlete]) {
 						if(ride.distance>score[ride.athlete].max_distance) score[ride.athlete].max_distance = ride.distance;
 						score[ride.athlete].distance = score[ride.athlete].distance + ride.distance;

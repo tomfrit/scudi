@@ -1,10 +1,10 @@
 (function($,UI) {
-	var app = angular.module('scudiClub',['ui.router']);
+	var app = angular.module('scudiClub',['ui.router','angularMoment']);
   
   app.config(config);
-  config.$inject = ['$stateProvider','$urlRouterProvider','$locationProvider','$urlMatcherFactoryProvider'];
+  config.$inject = ['$stateProvider','$urlRouterProvider','$locationProvider'];
 
-  function config($stateProvider, $urlRouterProvider,$locationProvider,$urlMatcherFactoryProvider) {
+  function config($stateProvider, $urlRouterProvider,$locationProvider) {
     $locationProvider.html5Mode({enabled:true});
     $urlRouterProvider.otherwise('/');
     //$urlRouterProvider.otherwise('/');
@@ -64,8 +64,9 @@
 
 
   app.run(kickstart);
-  kickstart.$inject=['$window','$state','$rootScope','loader','pendingRequests','$location','menuHelper','$window'];
-  function kickstart($window,$state,$rootScope,loader,pendingRequests,$location,menuHelper,$window) {
+  kickstart.$inject=['$window','$state','$rootScope','loader','pendingRequests','$location','menuHelper','$window','amMoment'];
+  function kickstart($window,$state,$rootScope,loader,pendingRequests,$location,menuHelper,$window,amMoment) {
+    amMoment.changeLocale('de');
     $rootScope.riders = {};
     $rootScope.facebookAppId = '392684544274301';
     $rootScope.$on('$stateChangeStart',function(evt, toState, toParams, fromState, fromParams){
@@ -104,10 +105,10 @@
 
 
   function addStatus(status) {
-    console.log(progress);
+    //console.log(progress);
     $('#status').html($("#status").html()+" "+status);
     progress = parseInt(progress)+20;
-    console.log(progress);
+    //console.log(progress);
     $("#progress").css("width",progress+"%");
   }
 
