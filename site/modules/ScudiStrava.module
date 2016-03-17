@@ -40,7 +40,10 @@ class ScudiStrava extends WireData implements Module {
 	}
 
 	
+	public function getStatus() {
+		return $this->user->name;
 
+	}
 	public function importRides() {
 		$data = $this->getStravaClubData();
 		foreach($data as $ride) {

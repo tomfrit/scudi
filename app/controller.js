@@ -2,20 +2,24 @@
 	'use strict'; 
 	var app = angular.module('scudiClub');
 	app.controller('homeCtrl',homeCtrl);
-	homeCtrl.$inject=['$scope','dude','loader'];
-	function homeCtrl($scope,dude,loader) {
-		$scope.dude=dude;
+	homeCtrl.$inject=['$scope','$rootScope','strava','loader'];
+	function homeCtrl($scope,$rootScope,strava,loader) {
+		$rootScope.rides = strava[0];
 		$scope.logout = function() {
-			loader.getData('logout',{}).then(function(data){});
+			loader.getData('logout',{}).then(function(data){
+				UI.offcanvas.hide();
+
+			});
 		}
 
 	}
 
 
 	app.controller('rootCtrl',rootCtrl);
-	rootCtrl.$inject=['$rootScope','strava'];
-	function rootCtrl($rootScope,strava) {
-		$rootScope.rides = strava[0];
+	rootCtrl.$inject=['$scope','dude'];
+	function rootCtrl($scope,dude) {
+		$scope.dude=dude;
+		
 	}
 
 	app.controller("scoreboard",scoreboard);

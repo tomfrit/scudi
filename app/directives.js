@@ -54,7 +54,6 @@
 			restrict:'AE',
 			template:'{{tag}}',
 			link: function(scope,ele,attrs) {
-				console.log(attrs.dayFromString);
 				var year = parseInt(attrs.dayFromString.substring(0,4));
 				var month = parseInt(attrs.dayFromString.substring(5,2));
 				var day = parseInt(attrs.dayFromString.substring(7,2));

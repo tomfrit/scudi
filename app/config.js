@@ -19,15 +19,10 @@
         }
       },
       resolve : {
-        strava:['loader','$q',function(loader,$q) {
-          progress=20;
-          //$('#status').html("Lade Daten: ");
-          $("#progress").css("width",progress+"%");
-          var rides = loader.getData('rides');
-          var user = loader.getData('importUserRides');
-          rides.then(function(d){addStatus("Clubdaten.");});
-          rides.then(function(d){addStatus("Nutzerdaten.");});
-          return $q.all([rides,user]);//loader.getData('getMenu').then(function(d) { addStatus("Done.");return d.data.menu; });
+        dude:['loader',function(loader) {
+          var dude = loader.getData('dude');
+          dude.then(function(d) { addStatus("Dude."); });
+          return dude;
         }]
       }
     })
@@ -37,10 +32,15 @@
       templateUrl:'/app/layout/home.html?2323',
       controller:'homeCtrl',
       resolve : {
-        dude:['loader',function(loader) {
-          var dude = loader.getData('dude');
-          dude.then(function(d) { addStatus("Dude."); });
-          return dude;
+        strava:['loader','$q',function(loader,$q) {
+          progress=20;
+          //$('#status').html("Lade Daten: ");
+          $("#progress").css("width",progress+"%");
+          var rides = loader.getData('rides');
+          var user = loader.getData('importUserRides');
+          rides.then(function(d){addStatus("Clubdaten.");});
+          user.then(function(d){addStatus("Nutzerdaten.");});
+          return $q.all([rides,user]);//loader.getData('getMenu').then(function(d) { addStatus("Done.");return d.data.menu; });
         }]
       }
     })

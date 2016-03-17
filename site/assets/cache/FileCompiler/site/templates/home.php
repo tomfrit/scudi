@@ -5,28 +5,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta name="description" content="Die Scuderia Südstadt im Strava Club" />
-	<meta name="keywords" content="Scudi Scuderia Südstadt Strava Strava Club" />
+	<meta name="keywords" content="Scudi Scuderia Südstadt Strava Strava Club Cycling Road" />
 	<meta name="language" content="de" />
 	<meta name="generator" content="ProcessWire" />  
-	<meta name="image" content="{{image}}">
+	<meta name="image" content="<?=$page->image->width('1200')->httpUrl;?>" />
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="manifest" href="manifest.json">
 	<link rel="shortcut icon" href="/favicon.ico" />
 	<title>Scuderia Strava Club</title>
-	<base href="//<?=$config->httpHost;?>/" />
-	<meta property="og:title" content=""/>
-	<meta property="og:description" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:type" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:site_name" content=""/>
+	<base href="http://<?=$config->httpHost;?>/" />
+	<meta property="og:title" content="Scuderia Strava Club"/>
+	<meta property="og:description" content="Der Strava Club der Scuderia Südstadt"/>
+	<meta property="og:url" content="<?=$page->httpUrl;?>"/>
+	<meta property="og:type" content="website"/>
+	<meta property="og:image" content="<?=$page->image->width('1200')->httpUrl;?>"/>
+	<meta property="og:site_name" content="Scuderia Strava Club"/>
 	<meta property="fb:admins" content="1410691276"/>
-	<link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196" />
-	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-	<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
-	<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
-	<link rel="icon" type="image/png" href="/favicon-128.png" sizes="128x128" />    
+	<link rel="icon" type="image/png" href="/img/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/img/favicon-128.png" sizes="128x128" />
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="/img/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="/img/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="/img/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="/img/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon-180x180.png" />
 	<link rel="stylesheet" href="/vendor/uikit/css/uikit.almost-flat.min.css" />
 	<link rel="stylesheet" href="/vendor/uikit/css/components/progress.almost-flat.min.css" />
 	<link rel="stylesheet" href="<?=$config->urls->templates?>styles/style.css?v=3" />
@@ -38,11 +47,12 @@
 	<!--script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.min.js"></script-->
 	<script src="/vendor/uikit/js/uikit.min.js"></script>
 	<script src="/vendor/uikit/js/components/pagination.min.js"></script>
+	<script src="/vendor/uikit/js/components/notify.min.js"></script>
 	<script src="/vendor/angular-ui-router.min.js"></script>
-	<script src="/app/config.js?v=04"></script>
-	<script src="/app/controller.js?v=027"></script>
+	<script src="/app/config.js?v=05"></script>
+	<script src="/app/controller.js?v=028"></script>
 	<script src="/app/factory.js?v=02"></script>
-	<script src="/app/directives.js?v=02"></script>
+	<script src="/app/directives.js?v=03"></script>
 
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

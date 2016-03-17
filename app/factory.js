@@ -51,9 +51,9 @@
 
 
   app.factory('loader',loader);
-  loader.$inject = ['$http','$rootScope','$q','pendingRequests','$window'];
+  loader.$inject = ['$http','$rootScope','$q','pendingRequests','$state'];
 
-  function loader($http,$rootScope,$q,pendingRequests,$window) {
+  function loader($http,$rootScope,$q,pendingRequests,$state) {
     var service = {
       getData:getData,
       data:[]
@@ -75,7 +75,7 @@
         params:params
       }).success(function(data) {
         //console.debug(data);
-        if(data && data.status=="401") { $window.location.href = '/login'; }
+        if(data && data.status=="401") { $state.go('login');}//$window.location.href = '/login'; }
         //$rootScope.loading = false;
         defer.resolve(data);
       }).

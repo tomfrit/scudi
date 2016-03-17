@@ -15,3 +15,4 @@
 2016-02-23 11:02:44	thomas	http://scuderia.local/admin/access/users/edit/?id=2420	Resized: large => large.0x100.jpg (0x100) 0.0280 secs 13887 => 12853 bytes
 2016-02-23 16:50:30	thomas	http://scuderia.local/admin/page/edit/?id=3004&InputfieldFileAjax=1	Resized: 10337700_994720673888075_3539158157522239123_n_1 => 10337700_994720673888075_3539158157522239123_n_1.0x100.jpg (0x100) 0.1110 secs 9960 => 3943 bytes
 2016-02-24 14:45:19	thomas	http://scu.enizehates.de/admin/access/users/edit/?id=3046	Resized: large => large.0x100.jpg (0x100) 0.0436 secs 27362 => 18174 bytes
+2016-03-17 10:01:49	thomas	http://scu.enizehates.de/	Resized: scudi-banner => scudi-banner.1200x0.jpg (1200x0) 1.4753 secs 137341 => 128820 bytes
