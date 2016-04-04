@@ -112,7 +112,7 @@ class ScudiStrava extends WireData implements Module {
 		$this->importRides();
 		$selector = array();
 		$selector[] = "template=ride";
-		$selector[] = "type=Ride";
+		$selector[] = "type=Ride|VirtualRide";
 		$selector[] = "start_date>2/1/2016";
 		/*
 		if($start_date) $selector[] = "start_date_local>".$start_date;
